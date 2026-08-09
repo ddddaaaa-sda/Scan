@@ -1,0 +1,43 @@
+UpdateCTestConfiguration  from :/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini
+Parse Config file:/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini
+   Site: ubuntu
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20260727-0608 - Experimental
+UpdateCTestConfiguration  from :/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini
+Parse Config file:/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini
+Test project /home/amov/scan_ws/build/scan_planner
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: test_test_scan_mid360_world_input_launch.py
+
+1: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml" "--package-name" "scan_planner" "--output-file" "/home/amov/scan_ws/build/scan_planner/launch_test/test_test_scan_mid360_world_input_launch.py.txt" "--command" "/usr/bin/python3" "-m" "launch_testing.launch_test" "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/test/test_scan_mid360_world_input_launch.py" "--junit-xml=/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml" "--package-name=scan_planner"
+1: Test timeout computed to be: 75
+1: -- run_test.py: invoking following command in '/home/amov/scan_ws/build/scan_planner':
+1:  - /usr/bin/python3 -m launch_testing.launch_test /home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/test/test_scan_mid360_world_input_launch.py --junit-xml=/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml --package-name=scan_planner
+1: usage: launch_test.py [-h] [--package-name PACKAGE_NAME] [-v] [-s]
+1:                       [--junit-xml XMLPATH]
+1:                       launch_test_file [launch_arguments ...]
+1: launch_test.py: error: [Errno 30] Read-only file system: '/home/amov/.ros/log/2026-07-27-14-08-43-570214-ubuntu-30'
+1: -- run_test.py: return code 2
+1: -- run_test.py: generate result file '/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml' with failed test
+1: -- run_test.py: verify result file '/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml'
+1/1 Test #1: test_test_scan_mid360_world_input_launch.py ...***Failed    1.20 sec
+
+0% tests passed, 1 tests failed out of 1
+
+Label Time Summary:
+launch_test    =   1.20 sec*proc (1 test)
+
+Total Test time (real) =   1.20 sec
+
+The following tests FAILED:
+	  1 - test_test_scan_mid360_world_input_launch.py (Failed)
+Errors while running CTest
+Output from these tests are in: /home/amov/scan_ws/build/scan_planner/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.

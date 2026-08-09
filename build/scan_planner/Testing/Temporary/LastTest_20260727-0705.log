@@ -1,0 +1,101 @@
+Start testing: Jul 27 15:05 CST
+----------------------------------------------------------
+1/1 Testing: test_test_scan_mid360_world_input_launch.py
+1/1 Test: test_test_scan_mid360_world_input_launch.py
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml" "--package-name" "scan_planner" "--output-file" "/home/amov/scan_ws/build/scan_planner/launch_test/test_test_scan_mid360_world_input_launch.py.txt" "--command" "/usr/bin/python3" "-m" "launch_testing.launch_test" "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/test/test_scan_mid360_world_input_launch.py" "--junit-xml=/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml" "--package-name=scan_planner"
+Directory: /home/amov/scan_ws/build/scan_planner
+"test_test_scan_mid360_world_input_launch.py" start time: Jul 27 15:05 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/amov/scan_ws/build/scan_planner':
+ - /usr/bin/python3 -m launch_testing.launch_test /home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/test/test_scan_mid360_world_input_launch.py --junit-xml=/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml --package-name=scan_planner
+[INFO] [launch]: All log files can be found below /tmp/scan_planner_test_logs/2026-07-27-15-05-51-359078-ubuntu-31
+[INFO] [launch]: Default logging verbosity is set to INFO
+test_world_input_pipeline (scan_planner.TestScanMid360WorldInput) ... getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[37;1m2026-07-27 15:05:51.403 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+[37;1m2026-07-27 15:05:51.404 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+[INFO] [motion_plan-1]: process started with pid [50]
+[motion_plan-1] getifaddrs: Operation not permitted
+[motion_plan-1] getifaddrs: Operation not permitted
+[motion_plan-1] getifaddrs: Operation not permitted
+[motion_plan-1] [37;1m2026-07-27 15:05:51.436 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+[motion_plan-1] [37;1m2026-07-27 15:05:51.437 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+[motion_plan-1] x_size =50 y_size =50 z_size5
+[motion_plan-1] resolution =0.1
+[motion_plan-1] origin =0
+[motion_plan-1] 0
+[motion_plan-1] 0
+[motion_plan-1] inflate_values =1
+[INFO] [1785135951.526762856] [scan_mid360_world_input_test]: Waiting for SCAN-Planner interfaces
+[motion_plan-1] [INFO] [1785135951.548664136] [scan_planner_interactive_node]: Interactive SCAN-Planner Node Ready!
+[motion_plan-1] [INFO] [1785135951.548982536] [scan_planner_interactive_node]: World inputs: cloud=/robot_0/cloud_registered_world, odom=/robot_0/odometry, global_path=/scan_global_path, frame=world
+[motion_plan-1] [INFO] [1785135951.549006120] [scan_planner_interactive_node]: === 使用方法 ===
+[motion_plan-1] [INFO] [1785135951.549015944] [scan_planner_interactive_node]: 1. 添加全局路径：使用2D Nav Goal工具设置终点
+[motion_plan-1] [INFO] [1785135951.549024936] [scan_planner_interactive_node]: 2. 添加障碍物（三种方法任选）：
+[motion_plan-1] [INFO] [1785135951.549032456] [scan_planner_interactive_node]:    - 方法A：使用Publish Point工具点击地图
+[motion_plan-1] [INFO] [1785135951.549039944] [scan_planner_interactive_node]:    - 方法B：使用2D Pose Estimate工具点击Grid任意位置（推荐）
+[motion_plan-1] [INFO] [1785135951.549050440] [scan_planner_interactive_node]:    - 方法C：发布PointCloud2到 /rviz_input_obstacles
+[motion_plan-1] [INFO] [1785135951.549058600] [scan_planner_interactive_node]: 3. 触发规划：ros2 topic pub /trigger_plan std_msgs/Bool "{data: true}"
+[motion_plan-1] [INFO] [1785135951.549065864] [scan_planner_interactive_node]: 4. 停止规划：ros2 topic pub /trigger_plan std_msgs/Bool "{data: false}"
+[motion_plan-1] [INFO] [1785135951.549072712] [scan_planner_interactive_node]: 5. 支持多次规划：可以反复发送true/false控制规划
+[motion_plan-1] [INFO] [1785135951.549079432] [scan_planner_interactive_node]: 
+[motion_plan-1] [INFO] [1785135951.549087912] [scan_planner_interactive_node]: === RViz2设置步骤 ===
+[motion_plan-1] [INFO] [1785135951.549095112] [scan_planner_interactive_node]: 1. 添加Grid显示
+[motion_plan-1] [INFO] [1785135951.549101928] [scan_planner_interactive_node]: 2. 添加2D Nav Goal工具（话题：/goal_pose）
+[motion_plan-1] [INFO] [1785135951.549109608] [scan_planner_interactive_node]: 3. 添加2D Pose Estimate工具（使用默认话题：/initialpose）
+[motion_plan-1] [INFO] [1785135951.549117576] [scan_planner_interactive_node]: 4. 添加Publish Point工具（使用默认话题：/clicked_point）
+[motion_plan-1] [INFO] [1785135951.549124840] [scan_planner_interactive_node]: 5. 添加PointCloud2显示（话题：/visual_obstacles）
+[motion_plan-1] [INFO] [1785135951.549131272] [scan_planner_interactive_node]: 6. 添加Path显示（话题：/visual_global_path和/visual_local_trajectory）
+[INFO] [1785135951.578891976] [scan_mid360_world_input_test]: Checking rejection of non-world input frames
+[motion_plan-1] [WARN] [1785135951.580288488] [scan_planner_interactive_node]: 忽略里程计: frame_id='map', 期望 'world'
+[motion_plan-1] [WARN] [1785135951.580762344] [scan_planner_interactive_node]: 忽略点云: frame_id='map', 期望 'world'; 当前阶段不执行 TF 转换
+[motion_plan-1] [WARN] [1785135951.581091528] [scan_planner_interactive_node]: 忽略全局路径: frame_id='map', 期望 'world'
+[motion_plan-1] [WARN] [1785135951.683869224] [scan_planner_interactive_node]: 忽略全局路径: frame_id='map', 期望 'world'
+[INFO] [1785135951.752460136] [scan_mid360_world_input_test]: Publishing synthetic world odometry
+[motion_plan-1] [WARN] [1785135951.749329800] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.
+[motion_plan-1] [WARN] [1785135951.949171496] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.
+[motion_plan-1] [WARN] [1785135952.149072520] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.
+[INFO] [1785135952.254535752] [scan_mid360_world_input_test]: Publishing filtered cloud and 3D global path
+[motion_plan-1] [INFO] [1785135952.256358824] [scan_planner_interactive_node]: 局部世界系障碍物: 2 点, 输入=8 点
+[motion_plan-1] [INFO] [1785135952.256783432] [scan_planner_interactive_node]: 收到世界系全局路径: 3 个点
+[motion_plan-1] [WARN] [1785135952.349141480] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.
+[INFO] [1785135952.355837416] [scan_mid360_world_input_test]: Triggering planning
+[motion_plan-1] [INFO] [1785135952.356419432] [scan_planner_interactive_node]: 收到 /trigger_plan=true，已触发世界系规划
+[motion_plan-1] [32miter(+1)=46,time(ms)=0.281,total_t(ms)=0.281,cost=5.383
+[motion_plan-1] [0mfirst_optimize_step_success=1
+[motion_plan-1] Need to reallocate time.
+[motion_plan-1] [INFO] [1785135952.551475784] [scan_planner_interactive_node]: 规划完成: 参考路径=3 点, 局部障碍物=2 点
+[motion_plan-1] [WARN] [1785135952.551846824] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.
+[INFO] [1785135952.564324744] [scan_mid360_world_input_test]: PASS: world input, XYZ filtering, path Z, local planning and inflation; A* markers observed=0
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.179s
+
+OK
+[motion_plan-1] [WARN] [1785135952.749037064] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.
+[INFO] [motion_plan-1]: sending signal 'SIGINT' to process[motion_plan-1]
+[motion_plan-1] [INFO] [1785135952.753303688] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[motion_plan-1] MotionPlanner Total Running Time: 0  ms 
+[INFO] [motion_plan-1]: process has finished cleanly [pid 50]
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml'
+<end of output>
+Test time =   3.03 sec
+----------------------------------------------------------
+Test Passed.
+"test_test_scan_mid360_world_input_launch.py" end time: Jul 27 15:05 CST
+"test_test_scan_mid360_world_input_launch.py" time elapsed: 00:00:03
+----------------------------------------------------------
+
+End testing: Jul 27 15:05 CST
+
+launch_test =   3.03 sec*proc
+

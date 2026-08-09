@@ -1,0 +1,4 @@
+Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner --clean-first -- -j8 -l8
+Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner --clean-first -- -j8 -l8
+Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner
+Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner

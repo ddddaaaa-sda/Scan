@@ -1,0 +1,12 @@
+[0.156s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test-result', '--verbose']
+[0.156s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test-result', test_result_base='build', all=False, result_files_only=False, verbose=True, delete=False, delete_yes=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff84d05bd0>, verb_extension=<colcon_test_result.verb.test_result.TestResultVerb object at 0xffff84d048e0>, main=<bound method TestResultVerb.main of <colcon_test_result.verb.test_result.TestResultVerb object at 0xffff84d048e0>>)
+[0.161s] Level 1:colcon.colcon_test_result.test_result:get_test_results(ctest)
+[0.165s] Level 1:colcon.colcon_test_result.test_result:get_test_results(xunit)
+[0.166s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0608/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.167s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0609/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.167s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0612/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.167s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0639/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.168s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0650/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.168s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0654/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.169s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0701/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.169s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/scan_planner/Testing/20260727-0705/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'

@@ -1,0 +1,143 @@
+[0.186s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'scan_planner', '--event-handlers', 'console_direct+']
+[0.186s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=['console_direct+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['scan_planner'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff84bf4ca0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff84bf48e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff84bf48e0>>)
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.459s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/amov/scan_ws'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extensions ['ignore', 'ignore_ament_install']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extension 'ignore'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extension 'colcon_pkg'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extensions ['colcon_meta']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extension 'colcon_meta'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extensions ['ros']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/SCAN-Planner-Pure-ROS2-master) by extension 'ros'
+[0.490s] DEBUG:colcon.colcon_core.package_identification:Package 'src/SCAN-Planner-Pure-ROS2-master' with type 'ros.ament_cmake' and name 'scan_planner'
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.525s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.529s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/amov/navigation/install
+[0.530s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/amov/navigation/livox_install
+[0.532s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 274 installed packages in /opt/ros/humble
+[0.563s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.627s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'cmake_args' from command line to 'None'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'cmake_target' from command line to 'None'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'cmake_clean_first' from command line to 'False'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'cmake_force_configure' from command line to 'False'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'ament_cmake_args' from command line to 'None'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[0.628s] Level 5:colcon.colcon_core.verb:set package 'scan_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.628s] DEBUG:colcon.colcon_core.verb:Building package 'scan_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/amov/scan_ws/build/scan_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/amov/scan_ws/install/scan_planner', 'merge_install': False, 'path': '/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master', 'symlink_install': False, 'test_result_base': None}
+[0.628s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.631s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.631s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master' with build type 'ament_cmake'
+[0.631s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master'
+[0.635s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.636s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.636s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.669s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner -- -j8 -l8
+[32.218s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner -- -j8 -l8
+[32.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner
+[32.295s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scan_planner)
+[32.296s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner
+[32.302s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner' for CMake module files
+[32.303s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner' for CMake config files
+[32.304s] Level 1:colcon.colcon_core.shell:create_environment_hook('scan_planner', 'cmake_prefix_path')
+[32.305s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amov/scan_ws/install/scan_planner/share/scan_planner/hook/cmake_prefix_path.ps1'
+[32.307s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amov/scan_ws/install/scan_planner/share/scan_planner/hook/cmake_prefix_path.dsv'
+[32.308s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amov/scan_ws/install/scan_planner/share/scan_planner/hook/cmake_prefix_path.sh'
+[32.311s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/lib'
+[32.311s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/bin'
+[32.311s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/lib/pkgconfig/scan_planner.pc'
+[32.312s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/lib/python3.10/site-packages'
+[32.313s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/bin'
+[32.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.ps1'
+[32.317s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.dsv'
+[32.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.sh'
+[32.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.bash'
+[32.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.zsh'
+[32.323s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amov/scan_ws/install/scan_planner/share/colcon-core/packages/scan_planner)
+[32.325s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scan_planner)
+[32.325s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner' for CMake module files
+[32.327s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner' for CMake config files
+[32.327s] Level 1:colcon.colcon_core.shell:create_environment_hook('scan_planner', 'cmake_prefix_path')
+[32.328s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amov/scan_ws/install/scan_planner/share/scan_planner/hook/cmake_prefix_path.ps1'
+[32.329s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amov/scan_ws/install/scan_planner/share/scan_planner/hook/cmake_prefix_path.dsv'
+[32.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amov/scan_ws/install/scan_planner/share/scan_planner/hook/cmake_prefix_path.sh'
+[32.332s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/lib'
+[32.332s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/bin'
+[32.332s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/lib/pkgconfig/scan_planner.pc'
+[32.333s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/lib/python3.10/site-packages'
+[32.334s] Level 1:colcon.colcon_core.environment:checking '/home/amov/scan_ws/install/scan_planner/bin'
+[32.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.ps1'
+[32.337s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.dsv'
+[32.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.sh'
+[32.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.bash'
+[32.340s] INFO:colcon.colcon_core.shell:Creating package script '/home/amov/scan_ws/install/scan_planner/share/scan_planner/package.zsh'
+[32.341s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amov/scan_ws/install/scan_planner/share/colcon-core/packages/scan_planner)
+[32.341s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[32.342s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[32.342s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[32.343s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[32.359s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[32.360s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[32.360s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[32.360s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to connect to socket /run/user/1000/bus: Operation not permitted
+[32.360s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[32.361s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amov/scan_ws/install/local_setup.ps1'
+[32.364s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/amov/scan_ws/install/_local_setup_util_ps1.py'
+[32.368s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amov/scan_ws/install/setup.ps1'
+[32.372s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amov/scan_ws/install/local_setup.sh'
+[32.374s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/amov/scan_ws/install/_local_setup_util_sh.py'
+[32.375s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amov/scan_ws/install/setup.sh'
+[32.379s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amov/scan_ws/install/local_setup.bash'
+[32.380s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amov/scan_ws/install/setup.bash'
+[32.383s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amov/scan_ws/install/local_setup.zsh'
+[32.385s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amov/scan_ws/install/setup.zsh'

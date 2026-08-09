@@ -1,0 +1,380 @@
+[0.000000] (-) TimerEvent: {}
+[0.000223] (scan_planner) JobQueued: {'identifier': 'scan_planner', 'dependencies': OrderedDict()}
+[0.000849] (scan_planner) JobStarted: {'identifier': 'scan_planner'}
+[0.017565] (scan_planner) JobProgress: {'identifier': 'scan_planner', 'progress': 'cmake'}
+[0.018745] (scan_planner) JobProgress: {'identifier': 'scan_planner', 'progress': 'build'}
+[0.019967] (scan_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/amov/scan_ws/build/scan_planner', '--', '-j8', '-l8'], 'cwd': '/home/amov/scan_ws/build/scan_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/amov/lio_ws'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.3.0/24'), ('USER', 'amov'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"zh-cn","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('all_proxy', 'socks5://127.0.0.1:7891'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('DEBUG', 'release'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/amov/navigation/install/serial/lib:/home/amov/navigation/install/robots_localization/lib:/home/amov/navigation/install/nlink_message/lib:/home/amov/navigation/livox_install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/amov'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/amov'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-13e63e42-1.10-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2284'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890'), ('COLCON_PREFIX_PATH', '/home/amov/navigation/install:/home/amov/navigation/livox_install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'amov'), ('http_proxy', 'http://127.0.0.1:7890'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'amov'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/amov/.local/bin:/home/amov/.local/bin:/home/amov/.codex/tmp/arg0/codex-arg01UAFP2:/home/amov/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/amov/.vscode/extensions/openai.chatgpt-26.727.40816-linux-arm64/bin/linux-aarch64'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2092,unix/ubuntu:/tmp/.ICE-unix/2092'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/65989218_a3cd_4715_a2a9_f54f20071c13'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.93'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '5'), ('AMENT_PREFIX_PATH', '/home/amov/navigation/install/nlink_parser_ros2:/home/amov/navigation/install/serial:/home/amov/navigation/install/robots_localization:/home/amov/navigation/install/nlink_message:/home/amov/navigation/install/ego_planner_2d:/home/amov/navigation/livox_install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019fa1c6-00ff-79a0-8b45-ce4f173d6ffc'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/amov/scan_ws/build/scan_planner'), ('VSCODE_CLI', '1'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/amov/.config/Code/CachedData/94e8ae2b28cb5cc932b86e1070569c4463565c37'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/amov/navigation/install/robots_localization/local/lib/python3.10/dist-packages:/home/amov/navigation/install/nlink_message/local/lib/python3.10/dist-packages:/home/amov/navigation/livox_install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/amov/navigation/install/nlink_parser_ros2:/home/amov/navigation/install/serial:/home/amov/navigation/install/robots_localization:/home/amov/navigation/install/nlink_message:/home/amov/navigation/install/ego_planner_2d:/home/amov/navigation/livox_install/livox_ros_driver2:/home/amov/.local:/opt/ros/humble'), ('VSCODE_PID', '4443')]), 'shell': False}
+[0.074179] (scan_planner) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099437] (-) TimerEvent: {}
+[0.199823] (-) TimerEvent: {}
+[0.300215] (-) TimerEvent: {}
+[0.319082] (scan_planner) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.331400] (scan_planner) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.383927] (scan_planner) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.387521] (scan_planner) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.398447] (scan_planner) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.400273] (-) TimerEvent: {}
+[0.414128] (scan_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.432500] (scan_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.481670] (scan_planner) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.483881] (scan_planner) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.500478] (-) TimerEvent: {}
+[0.600882] (-) TimerEvent: {}
+[0.642891] (scan_planner) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.701066] (-) TimerEvent: {}
+[0.721978] (scan_planner) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.764453] (scan_planner) StdoutLine: {'line': b'-- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)\n'}
+[0.769978] (scan_planner) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[0.801237] (-) TimerEvent: {}
+[0.887534] (scan_planner) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.901525] (-) TimerEvent: {}
+[0.918991] (scan_planner) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[1.001647] (-) TimerEvent: {}
+[1.083390] (scan_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.101831] (-) TimerEvent: {}
+[1.122521] (scan_planner) StdoutLine: {'line': b'-- Generating done\n'}
+[1.135338] (scan_planner) StdoutLine: {'line': b'-- Build files have been written to: /home/amov/scan_ws/build/scan_planner\n'}
+[1.189254] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/plan_env/CMakeFiles/local_map.dir/flags.make' has modification time 16203 s in the future\n"}
+[1.202002] (-) TimerEvent: {}
+[1.212929] (scan_planner) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target local_map\n'}
+[1.215305] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.220457] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/plan_env/CMakeFiles/local_map.dir/flags.make' has modification time 16203 s in the future\n"}
+[1.222475] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.241611] (scan_planner) StdoutLine: {'line': b'[ 16%] Built target local_map\n'}
+[1.246814] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/path_searching/CMakeFiles/path_searching.dir/flags.make' has modification time 16203 s in the future\n"}
+[1.273503] (scan_planner) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target path_searching\n'}
+[1.276364] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.280967] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/path_searching/CMakeFiles/path_searching.dir/flags.make' has modification time 16203 s in the future\n"}
+[1.282737] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.302159] (-) TimerEvent: {}
+[1.302980] (scan_planner) StdoutLine: {'line': b'[ 33%] Built target path_searching\n'}
+[1.308255] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/bspline_opt/CMakeFiles/bspline_opt.dir/flags.make' has modification time 16203 s in the future\n"}
+[1.337141] (scan_planner) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target bspline_opt\n'}
+[1.339251] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.347797] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/bspline_opt/CMakeFiles/bspline_opt.dir/flags.make' has modification time 16203 s in the future\n"}
+[1.350265] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.369591] (scan_planner) StdoutLine: {'line': b'[ 66%] Built target bspline_opt\n'}
+[1.375233] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/plan_manage/CMakeFiles/scan_planner.dir/flags.make' has modification time 16203 s in the future\n"}
+[1.401911] (scan_planner) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target scan_planner\n'}
+[1.402547] (-) TimerEvent: {}
+[1.404157] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.411181] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'planner/plan_manage/CMakeFiles/scan_planner.dir/flags.make' has modification time 16202 s in the future\n"}
+[1.413766] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.431698] (scan_planner) StdoutLine: {'line': b'[ 83%] Built target scan_planner\n'}
+[1.436431] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'CMakeFiles/motion_plan.dir/flags.make' has modification time 16202 s in the future\n"}
+[1.466349] (scan_planner) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target motion_plan\n'}
+[1.468609] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.477985] (scan_planner) StderrLine: {'line': b"gmake[2]: Warning: File 'CMakeFiles/motion_plan.dir/flags.make' has modification time 16202 s in the future\n"}
+[1.484669] (scan_planner) StderrLine: {'line': b'gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.\n'}
+[1.502860] (-) TimerEvent: {}
+[1.503300] (scan_planner) StdoutLine: {'line': b'[100%] Built target motion_plan\n'}
+[1.534142] (scan_planner) CommandEnded: {'returncode': 0}
+[1.536628] (scan_planner) JobProgress: {'identifier': 'scan_planner', 'progress': 'install'}
+[1.556280] (scan_planner) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/amov/scan_ws/build/scan_planner'], 'cwd': '/home/amov/scan_ws/build/scan_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/amov/lio_ws'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.3.0/24'), ('USER', 'amov'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"zh-cn","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('all_proxy', 'socks5://127.0.0.1:7891'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('DEBUG', 'release'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/amov/navigation/install/serial/lib:/home/amov/navigation/install/robots_localization/lib:/home/amov/navigation/install/nlink_message/lib:/home/amov/navigation/livox_install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/amov'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/amov'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-13e63e42-1.10-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2284'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890'), ('COLCON_PREFIX_PATH', '/home/amov/navigation/install:/home/amov/navigation/livox_install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'amov'), ('http_proxy', 'http://127.0.0.1:7890'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'amov'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/amov/.local/bin:/home/amov/.local/bin:/home/amov/.codex/tmp/arg0/codex-arg01UAFP2:/home/amov/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/amov/.vscode/extensions/openai.chatgpt-26.727.40816-linux-arm64/bin/linux-aarch64'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2092,unix/ubuntu:/tmp/.ICE-unix/2092'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/65989218_a3cd_4715_a2a9_f54f20071c13'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.93'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '5'), ('AMENT_PREFIX_PATH', '/home/amov/navigation/install/nlink_parser_ros2:/home/amov/navigation/install/serial:/home/amov/navigation/install/robots_localization:/home/amov/navigation/install/nlink_message:/home/amov/navigation/install/ego_planner_2d:/home/amov/navigation/livox_install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019fa1c6-00ff-79a0-8b45-ce4f173d6ffc'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/amov/scan_ws/build/scan_planner'), ('VSCODE_CLI', '1'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/amov/.config/Code/CachedData/94e8ae2b28cb5cc932b86e1070569c4463565c37'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/amov/navigation/install/robots_localization/local/lib/python3.10/dist-packages:/home/amov/navigation/install/nlink_message/local/lib/python3.10/dist-packages:/home/amov/navigation/livox_install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/amov/navigation/install/nlink_parser_ros2:/home/amov/navigation/install/serial:/home/amov/navigation/install/robots_localization:/home/amov/navigation/install/nlink_message:/home/amov/navigation/install/ego_planner_2d:/home/amov/navigation/livox_install/livox_ros_driver2:/home/amov/.local:/opt/ros/humble'), ('VSCODE_PID', '4443')]), 'shell': False}
+[1.570786] (scan_planner) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.571439] (scan_planner) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.572010] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/lib/scan_planner/motion_plan\n'}
+[1.572548] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/launch/scan_planner.launch.py\n'}
+[1.572879] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/rviz/rviz.rviz\n'}
+[1.573171] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/package_run_dependencies/scan_planner\n'}
+[1.573379] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/parent_prefix_path/scan_planner\n'}
+[1.573671] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.sh\n'}
+[1.573915] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.dsv\n'}
+[1.574168] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.sh\n'}
+[1.574412] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.dsv\n'}
+[1.574869] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.bash\n'}
+[1.575409] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.sh\n'}
+[1.575723] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.zsh\n'}
+[1.575870] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.dsv\n'}
+[1.575982] (scan_planner) StdoutLine: {'line': b'-- Symlinking: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.dsv\n'}
+[1.594130] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/packages/scan_planner\n'}
+[1.594564] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig.cmake\n'}
+[1.595123] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig-version.cmake\n'}
+[1.595673] (scan_planner) StdoutLine: {'line': b'-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.xml\n'}
+[1.602950] (-) TimerEvent: {}
+[1.703312] (-) TimerEvent: {}
+[1.803722] (-) TimerEvent: {}
+[1.904112] (-) TimerEvent: {}
+[2.004574] (-) TimerEvent: {}
+[2.105061] (-) TimerEvent: {}
+[2.205601] (-) TimerEvent: {}
+[2.306114] (-) TimerEvent: {}
+[2.406602] (-) TimerEvent: {}
+[2.507090] (-) TimerEvent: {}
+[2.607582] (-) TimerEvent: {}
+[2.708076] (-) TimerEvent: {}
+[2.808588] (-) TimerEvent: {}
+[2.909139] (-) TimerEvent: {}
+[3.009678] (-) TimerEvent: {}
+[3.110172] (-) TimerEvent: {}
+[3.210668] (-) TimerEvent: {}
+[3.311124] (-) TimerEvent: {}
+[3.411647] (-) TimerEvent: {}
+[3.512174] (-) TimerEvent: {}
+[3.612628] (-) TimerEvent: {}
+[3.713086] (-) TimerEvent: {}
+[3.813556] (-) TimerEvent: {}
+[3.914034] (-) TimerEvent: {}
+[4.014498] (-) TimerEvent: {}
+[4.115010] (-) TimerEvent: {}
+[4.215518] (-) TimerEvent: {}
+[4.316018] (-) TimerEvent: {}
+[4.416511] (-) TimerEvent: {}
+[4.516999] (-) TimerEvent: {}
+[4.617464] (-) TimerEvent: {}
+[4.717999] (-) TimerEvent: {}
+[4.818531] (-) TimerEvent: {}
+[4.919034] (-) TimerEvent: {}
+[5.019524] (-) TimerEvent: {}
+[5.119972] (-) TimerEvent: {}
+[5.220430] (-) TimerEvent: {}
+[5.320908] (-) TimerEvent: {}
+[5.421402] (-) TimerEvent: {}
+[5.521933] (-) TimerEvent: {}
+[5.622421] (-) TimerEvent: {}
+[5.722885] (-) TimerEvent: {}
+[5.823387] (-) TimerEvent: {}
+[5.923890] (-) TimerEvent: {}
+[6.024401] (-) TimerEvent: {}
+[6.124947] (-) TimerEvent: {}
+[6.225543] (-) TimerEvent: {}
+[6.326112] (-) TimerEvent: {}
+[6.426643] (-) TimerEvent: {}
+[6.527146] (-) TimerEvent: {}
+[6.627637] (-) TimerEvent: {}
+[6.728159] (-) TimerEvent: {}
+[6.828661] (-) TimerEvent: {}
+[6.929183] (-) TimerEvent: {}
+[7.029692] (-) TimerEvent: {}
+[7.130202] (-) TimerEvent: {}
+[7.230690] (-) TimerEvent: {}
+[7.331183] (-) TimerEvent: {}
+[7.431709] (-) TimerEvent: {}
+[7.532213] (-) TimerEvent: {}
+[7.632726] (-) TimerEvent: {}
+[7.733230] (-) TimerEvent: {}
+[7.833764] (-) TimerEvent: {}
+[7.934274] (-) TimerEvent: {}
+[8.034777] (-) TimerEvent: {}
+[8.135276] (-) TimerEvent: {}
+[8.235775] (-) TimerEvent: {}
+[8.336204] (-) TimerEvent: {}
+[8.436671] (-) TimerEvent: {}
+[8.537184] (-) TimerEvent: {}
+[8.637642] (-) TimerEvent: {}
+[8.738101] (-) TimerEvent: {}
+[8.838585] (-) TimerEvent: {}
+[8.939063] (-) TimerEvent: {}
+[9.039570] (-) TimerEvent: {}
+[9.140118] (-) TimerEvent: {}
+[9.240652] (-) TimerEvent: {}
+[9.341176] (-) TimerEvent: {}
+[9.441699] (-) TimerEvent: {}
+[9.542210] (-) TimerEvent: {}
+[9.642683] (-) TimerEvent: {}
+[9.743166] (-) TimerEvent: {}
+[9.843679] (-) TimerEvent: {}
+[9.944169] (-) TimerEvent: {}
+[10.044635] (-) TimerEvent: {}
+[10.145070] (-) TimerEvent: {}
+[10.245508] (-) TimerEvent: {}
+[10.345947] (-) TimerEvent: {}
+[10.446422] (-) TimerEvent: {}
+[10.546948] (-) TimerEvent: {}
+[10.650365] (-) TimerEvent: {}
+[10.750862] (-) TimerEvent: {}
+[10.851405] (-) TimerEvent: {}
+[10.951944] (-) TimerEvent: {}
+[11.052459] (-) TimerEvent: {}
+[11.152964] (-) TimerEvent: {}
+[11.253370] (-) TimerEvent: {}
+[11.353794] (-) TimerEvent: {}
+[11.454223] (-) TimerEvent: {}
+[11.554643] (-) TimerEvent: {}
+[11.655087] (-) TimerEvent: {}
+[11.755553] (-) TimerEvent: {}
+[11.856023] (-) TimerEvent: {}
+[11.956474] (-) TimerEvent: {}
+[12.056976] (-) TimerEvent: {}
+[12.157470] (-) TimerEvent: {}
+[12.258009] (-) TimerEvent: {}
+[12.358513] (-) TimerEvent: {}
+[12.459016] (-) TimerEvent: {}
+[12.559498] (-) TimerEvent: {}
+[12.659950] (-) TimerEvent: {}
+[12.760410] (-) TimerEvent: {}
+[12.860913] (-) TimerEvent: {}
+[12.961361] (-) TimerEvent: {}
+[13.061844] (-) TimerEvent: {}
+[13.162356] (-) TimerEvent: {}
+[13.262844] (-) TimerEvent: {}
+[13.363314] (-) TimerEvent: {}
+[13.463837] (-) TimerEvent: {}
+[13.564326] (-) TimerEvent: {}
+[13.664852] (-) TimerEvent: {}
+[13.765329] (-) TimerEvent: {}
+[13.865783] (-) TimerEvent: {}
+[13.966228] (-) TimerEvent: {}
+[14.066672] (-) TimerEvent: {}
+[14.167131] (-) TimerEvent: {}
+[14.267642] (-) TimerEvent: {}
+[14.368149] (-) TimerEvent: {}
+[14.468684] (-) TimerEvent: {}
+[14.569182] (-) TimerEvent: {}
+[14.669664] (-) TimerEvent: {}
+[14.770168] (-) TimerEvent: {}
+[14.870703] (-) TimerEvent: {}
+[14.971219] (-) TimerEvent: {}
+[15.071754] (-) TimerEvent: {}
+[15.172265] (-) TimerEvent: {}
+[15.272768] (-) TimerEvent: {}
+[15.373250] (-) TimerEvent: {}
+[15.473764] (-) TimerEvent: {}
+[15.574254] (-) TimerEvent: {}
+[15.674754] (-) TimerEvent: {}
+[15.775252] (-) TimerEvent: {}
+[15.875751] (-) TimerEvent: {}
+[15.976248] (-) TimerEvent: {}
+[16.076739] (-) TimerEvent: {}
+[16.177218] (-) TimerEvent: {}
+[16.277687] (-) TimerEvent: {}
+[16.378183] (-) TimerEvent: {}
+[16.478679] (-) TimerEvent: {}
+[16.579252] (-) TimerEvent: {}
+[16.679761] (-) TimerEvent: {}
+[16.780280] (-) TimerEvent: {}
+[16.880839] (-) TimerEvent: {}
+[16.981373] (-) TimerEvent: {}
+[17.081916] (-) TimerEvent: {}
+[17.182463] (-) TimerEvent: {}
+[17.282969] (-) TimerEvent: {}
+[17.383454] (-) TimerEvent: {}
+[17.483903] (-) TimerEvent: {}
+[17.584419] (-) TimerEvent: {}
+[17.684930] (-) TimerEvent: {}
+[17.785452] (-) TimerEvent: {}
+[17.885962] (-) TimerEvent: {}
+[17.986420] (-) TimerEvent: {}
+[18.086903] (-) TimerEvent: {}
+[18.187399] (-) TimerEvent: {}
+[18.287874] (-) TimerEvent: {}
+[18.388365] (-) TimerEvent: {}
+[18.488863] (-) TimerEvent: {}
+[18.589364] (-) TimerEvent: {}
+[18.689874] (-) TimerEvent: {}
+[18.790394] (-) TimerEvent: {}
+[18.890912] (-) TimerEvent: {}
+[18.991431] (-) TimerEvent: {}
+[19.091917] (-) TimerEvent: {}
+[19.192362] (-) TimerEvent: {}
+[19.292827] (-) TimerEvent: {}
+[19.393310] (-) TimerEvent: {}
+[19.493826] (-) TimerEvent: {}
+[19.594359] (-) TimerEvent: {}
+[19.694916] (-) TimerEvent: {}
+[19.795461] (-) TimerEvent: {}
+[19.895915] (-) TimerEvent: {}
+[19.996356] (-) TimerEvent: {}
+[20.096878] (-) TimerEvent: {}
+[20.197412] (-) TimerEvent: {}
+[20.297960] (-) TimerEvent: {}
+[20.398488] (-) TimerEvent: {}
+[20.499001] (-) TimerEvent: {}
+[20.599518] (-) TimerEvent: {}
+[20.700035] (-) TimerEvent: {}
+[20.800563] (-) TimerEvent: {}
+[20.901031] (-) TimerEvent: {}
+[21.001520] (-) TimerEvent: {}
+[21.102041] (-) TimerEvent: {}
+[21.202548] (-) TimerEvent: {}
+[21.303074] (-) TimerEvent: {}
+[21.403585] (-) TimerEvent: {}
+[21.504097] (-) TimerEvent: {}
+[21.604606] (-) TimerEvent: {}
+[21.705114] (-) TimerEvent: {}
+[21.805623] (-) TimerEvent: {}
+[21.906190] (-) TimerEvent: {}
+[22.006717] (-) TimerEvent: {}
+[22.107217] (-) TimerEvent: {}
+[22.207734] (-) TimerEvent: {}
+[22.308256] (-) TimerEvent: {}
+[22.408764] (-) TimerEvent: {}
+[22.509271] (-) TimerEvent: {}
+[22.609848] (-) TimerEvent: {}
+[22.710365] (-) TimerEvent: {}
+[22.810895] (-) TimerEvent: {}
+[22.911424] (-) TimerEvent: {}
+[23.012158] (-) TimerEvent: {}
+[23.112723] (-) TimerEvent: {}
+[23.213229] (-) TimerEvent: {}
+[23.313667] (-) TimerEvent: {}
+[23.414140] (-) TimerEvent: {}
+[23.514692] (-) TimerEvent: {}
+[23.615234] (-) TimerEvent: {}
+[23.715751] (-) TimerEvent: {}
+[23.816245] (-) TimerEvent: {}
+[23.916738] (-) TimerEvent: {}
+[24.017242] (-) TimerEvent: {}
+[24.117765] (-) TimerEvent: {}
+[24.218256] (-) TimerEvent: {}
+[24.318979] (-) TimerEvent: {}
+[24.419451] (-) TimerEvent: {}
+[24.519958] (-) TimerEvent: {}
+[24.620490] (-) TimerEvent: {}
+[24.720996] (-) TimerEvent: {}
+[24.821534] (-) TimerEvent: {}
+[24.922020] (-) TimerEvent: {}
+[25.022470] (-) TimerEvent: {}
+[25.122944] (-) TimerEvent: {}
+[25.223448] (-) TimerEvent: {}
+[25.323950] (-) TimerEvent: {}
+[25.424451] (-) TimerEvent: {}
+[25.524969] (-) TimerEvent: {}
+[25.625473] (-) TimerEvent: {}
+[25.725964] (-) TimerEvent: {}
+[25.826450] (-) TimerEvent: {}
+[25.926964] (-) TimerEvent: {}
+[26.027457] (-) TimerEvent: {}
+[26.127935] (-) TimerEvent: {}
+[26.228449] (-) TimerEvent: {}
+[26.328934] (-) TimerEvent: {}
+[26.429436] (-) TimerEvent: {}
+[26.529985] (-) TimerEvent: {}
+[26.630510] (-) TimerEvent: {}
+[26.731033] (-) TimerEvent: {}
+[26.831578] (-) TimerEvent: {}
+[26.932105] (-) TimerEvent: {}
+[27.032609] (-) TimerEvent: {}
+[27.133091] (-) TimerEvent: {}
+[27.233592] (-) TimerEvent: {}
+[27.334098] (-) TimerEvent: {}
+[27.434602] (-) TimerEvent: {}
+[27.535139] (-) TimerEvent: {}
+[27.635663] (-) TimerEvent: {}
+[27.736186] (-) TimerEvent: {}
+[27.836703] (-) TimerEvent: {}
+[27.937195] (-) TimerEvent: {}
+[28.037741] (-) TimerEvent: {}
+[28.138221] (-) TimerEvent: {}
+[28.238691] (-) TimerEvent: {}
+[28.339191] (-) TimerEvent: {}
+[28.439656] (-) TimerEvent: {}
+[28.540271] (-) TimerEvent: {}
+[28.640753] (-) TimerEvent: {}
+[28.741260] (-) TimerEvent: {}
+[28.841774] (-) TimerEvent: {}
+[28.942444] (-) TimerEvent: {}
+[29.042952] (-) TimerEvent: {}
+[29.143460] (-) TimerEvent: {}
+[29.243971] (-) TimerEvent: {}
+[29.344480] (-) TimerEvent: {}
+[29.445029] (-) TimerEvent: {}
+[29.545579] (-) TimerEvent: {}
+[29.646080] (-) TimerEvent: {}
+[29.746621] (-) TimerEvent: {}
+[29.847187] (-) TimerEvent: {}
+[29.947718] (-) TimerEvent: {}
+[30.031086] (scan_planner) CommandEnded: {'returncode': 0}
+[30.048959] (-) TimerEvent: {}
+[30.096168] (scan_planner) JobEnded: {'identifier': 'scan_planner', 'rc': 0}
+[30.099279] (-) EventReactorShutdown: {}

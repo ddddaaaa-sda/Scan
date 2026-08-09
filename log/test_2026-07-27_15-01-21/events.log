@@ -1,0 +1,147 @@
+[0.000000] (-) TimerEvent: {}
+[0.000206] (scan_planner) JobQueued: {'identifier': 'scan_planner', 'dependencies': OrderedDict([('scan_planner', '/home/amov/scan_ws/install/scan_planner')])}
+[0.000820] (scan_planner) JobStarted: {'identifier': 'scan_planner'}
+[0.041829] (scan_planner) Command: {'cmd': ['/usr/bin/ctest', '-C', 'Release', '-D', 'ExperimentalTest', '--no-compress-output', '-V', '--force-new-ctest-process', '--rerun-failed', '--output-on-failure'], 'cwd': '/home/amov/scan_ws/build/scan_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/amov/scan_ws'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.3.0/24'), ('USER', 'amov'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"en-us","osLocale":"zh-cn","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}'), ('all_proxy', 'socks5://127.0.0.1:7891'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('DEBUG', 'release'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/amov/navigation/install/serial/lib:/home/amov/navigation/install/robots_localization/lib:/home/amov/navigation/install/nlink_message/lib:/home/amov/navigation/livox_install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/amov'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/amov'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-13e63e42-1.10-main.sock'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2293'), ('ROS_LOG_DIR', '/tmp/scan_planner_test_logs'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890'), ('COLCON_PREFIX_PATH', '/home/amov/scan_ws/install:/home/amov/navigation/install:/home/amov/navigation/livox_install'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'amov'), ('http_proxy', 'http://127.0.0.1:7890'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'amov'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/amov/.local/bin:/home/amov/.codex/tmp/arg0/codex-arg0snJhE3:/home/amov/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/amov/.vscode/extensions/openai.chatgpt-26.727.40816-linux-arm64/bin/linux-aarch64'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/2101,unix/ubuntu:/tmp/.ICE-unix/2101'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bb59420b_a79e_4f49_9b50_7d829046ac06'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '5'), ('AMENT_PREFIX_PATH', '/home/amov/scan_ws/install/scan_planner:/home/amov/navigation/install/nlink_parser_ros2:/home/amov/navigation/install/serial:/home/amov/navigation/install/robots_localization:/home/amov/navigation/install/nlink_message:/home/amov/navigation/install/ego_planner_2d:/home/amov/navigation/livox_install/livox_ros_driver2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019fa28a-86cb-7693-97d9-63a5cd6ad6d5'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/amov/scan_ws/build/scan_planner'), ('VSCODE_CLI', '1'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/amov/.config/Code/CachedData/94e8ae2b28cb5cc932b86e1070569c4463565c37'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/amov/navigation/install/robots_localization/local/lib/python3.10/dist-packages:/home/amov/navigation/install/nlink_message/local/lib/python3.10/dist-packages:/home/amov/navigation/livox_install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('ELECTRON_NO_ATTACH_CONSOLE', '1'), ('CMAKE_PREFIX_PATH', '/home/amov/scan_ws/install/scan_planner:/home/amov/navigation/install/nlink_parser_ros2:/home/amov/navigation/install/serial:/home/amov/navigation/install/robots_localization:/home/amov/navigation/install/nlink_message:/home/amov/navigation/install/ego_planner_2d:/home/amov/navigation/livox_install/livox_ros_driver2:/home/amov/.local'), ('VSCODE_PID', '3506')]), 'shell': False}
+[0.058517] (scan_planner) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini\n'}
+[0.059273] (scan_planner) StdoutLine: {'line': b'Parse Config file:/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini\n'}
+[0.059430] (scan_planner) StdoutLine: {'line': b'   Site: ubuntu\n'}
+[0.059552] (scan_planner) StdoutLine: {'line': b'   Build name: (empty)\n'}
+[0.059664] (scan_planner) StdoutLine: {'line': b' Add coverage exclude regular expressions.\n'}
+[0.059773] (scan_planner) StdoutLine: {'line': b'Create new tag: 20260727-0701 - Experimental\n'}
+[0.059881] (scan_planner) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini\n'}
+[0.059988] (scan_planner) StdoutLine: {'line': b'Parse Config file:/home/amov/scan_ws/build/scan_planner/CTestConfiguration.ini\n'}
+[0.060092] (scan_planner) StdoutLine: {'line': b'Test project /home/amov/scan_ws/build/scan_planner\n'}
+[0.060310] (scan_planner) StdoutLine: {'line': b'Constructing a list of tests\n'}
+[0.060765] (scan_planner) StdoutLine: {'line': b'Done constructing a list of tests\n'}
+[0.060897] (scan_planner) StdoutLine: {'line': b'Updating test list for fixtures\n'}
+[0.061005] (scan_planner) StdoutLine: {'line': b'Added 0 tests to meet fixture requirements\n'}
+[0.061108] (scan_planner) StdoutLine: {'line': b'Checking test dependency graph...\n'}
+[0.061208] (scan_planner) StdoutLine: {'line': b'Checking test dependency graph end\n'}
+[0.061307] (scan_planner) StdoutLine: {'line': b'test 1\n'}
+[0.061406] (scan_planner) StdoutLine: {'line': b'    Start 1: test_test_scan_mid360_world_input_launch.py\n'}
+[0.061506] (scan_planner) StdoutLine: {'line': b'\n'}
+[0.061603] (scan_planner) StdoutLine: {'line': b'1: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml" "--package-name" "scan_planner" "--output-file" "/home/amov/scan_ws/build/scan_planner/launch_test/test_test_scan_mid360_world_input_launch.py.txt" "--command" "/usr/bin/python3" "-m" "launch_testing.launch_test" "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/test/test_scan_mid360_world_input_launch.py" "--junit-xml=/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml" "--package-name=scan_planner"\n'}
+[0.061723] (scan_planner) StdoutLine: {'line': b'1: Test timeout computed to be: 75\n'}
+[0.099549] (-) TimerEvent: {}
+[0.169139] (scan_planner) StdoutLine: {'line': b"1: -- run_test.py: invoking following command in '/home/amov/scan_ws/build/scan_planner':\n"}
+[0.169815] (scan_planner) StdoutLine: {'line': b'1:  - /usr/bin/python3 -m launch_testing.launch_test /home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/test/test_scan_mid360_world_input_launch.py --junit-xml=/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml --package-name=scan_planner\n'}
+[0.199712] (-) TimerEvent: {}
+[0.300103] (-) TimerEvent: {}
+[0.400545] (-) TimerEvent: {}
+[0.500979] (-) TimerEvent: {}
+[0.601396] (-) TimerEvent: {}
+[0.701804] (-) TimerEvent: {}
+[0.802199] (-) TimerEvent: {}
+[0.902626] (-) TimerEvent: {}
+[1.003101] (-) TimerEvent: {}
+[1.103504] (-) TimerEvent: {}
+[1.115392] (scan_planner) StdoutLine: {'line': b'1: [INFO] [launch]: All log files can be found below /tmp/scan_planner_test_logs/2026-07-27-15-01-23-014904-ubuntu-32\n'}
+[1.116075] (scan_planner) StdoutLine: {'line': b'1: [INFO] [launch]: Default logging verbosity is set to INFO\n'}
+[1.120655] (scan_planner) StdoutLine: {'line': b'1: test_world_input_pipeline (scan_planner.TestScanMid360WorldInput) ... getifaddrs: Operation not permitted\n'}
+[1.121850] (scan_planner) StdoutLine: {'line': b'1: getifaddrs: Operation not permitted\n'}
+[1.122419] (scan_planner) StdoutLine: {'line': b'1: getifaddrs: Operation not permitted\n'}
+[1.123764] (scan_planner) StdoutLine: {'line': b'1: \x1b[37;1m2026-07-27 15:01:23.061 \x1b[31;1m[\x1b[37;1mTRANSPORT_UDP\x1b[31;1m Error] \x1b[37mError creating socket: Operation not permitted\x1b[34;1m -> Function \x1b[36minit\x1b[m\n'}
+[1.124107] (scan_planner) StdoutLine: {'line': b'1: \x1b[37;1m2026-07-27 15:01:23.061 \x1b[31;1m[\x1b[37;1mRTPS_PARTICIPANT\x1b[31;1m Error] \x1b[37mUser transport failed to register.\x1b[34;1m -> Function \x1b[36mRTPSParticipantImpl\x1b[m\n'}
+[1.136930] (scan_planner) StdoutLine: {'line': b'1: [INFO] [motion_plan-1]: process started with pid [51]\n'}
+[1.158612] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] getifaddrs: Operation not permitted\n'}
+[1.159565] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] getifaddrs: Operation not permitted\n'}
+[1.172591] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] getifaddrs: Operation not permitted\n'}
+[1.175305] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] \x1b[37;1m2026-07-27 15:01:23.098 \x1b[31;1m[\x1b[37;1mTRANSPORT_UDP\x1b[31;1m Error] \x1b[37mError creating socket: Operation not permitted\x1b[34;1m -> Function \x1b[36minit\x1b[m\n'}
+[1.176553] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] \x1b[37;1m2026-07-27 15:01:23.098 \x1b[31;1m[\x1b[37;1mRTPS_PARTICIPANT\x1b[31;1m Error] \x1b[37mUser transport failed to register.\x1b[34;1m -> Function \x1b[36mRTPSParticipantImpl\x1b[m\n'}
+[1.194810] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] x_size =50 y_size =50 z_size5\n'}
+[1.195434] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] resolution =0.1\n'}
+[1.195604] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] origin =0\n'}
+[1.195734] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] 0\n'}
+[1.195854] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] 0\n'}
+[1.195964] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] inflate_values =1\n'}
+[1.203646] (-) TimerEvent: {}
+[1.245169] (scan_planner) StdoutLine: {'line': b'1: [INFO] [1785135683.183076776] [scan_mid360_world_input_test]: Waiting for SCAN-Planner interfaces\n'}
+[1.266573] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203594888] [scan_planner_interactive_node]: Interactive SCAN-Planner Node Ready!\n'}
+[1.267344] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203899016] [scan_planner_interactive_node]: World inputs: cloud=/robot_0/cloud_registered_world, odom=/robot_0/odometry, global_path=/scan_global_path, frame=world\n'}
+[1.267903] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203922440] [scan_planner_interactive_node]: === \xe4\xbd\xbf\xe7\x94\xa8\xe6\x96\xb9\xe6\xb3\x95 ===\n'}
+[1.268251] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203933288] [scan_planner_interactive_node]: 1. \xe6\xb7\xbb\xe5\x8a\xa0\xe5\x85\xa8\xe5\xb1\x80\xe8\xb7\xaf\xe5\xbe\x84\xef\xbc\x9a\xe4\xbd\xbf\xe7\x94\xa82D Nav Goal\xe5\xb7\xa5\xe5\x85\xb7\xe8\xae\xbe\xe7\xbd\xae\xe7\xbb\x88\xe7\x82\xb9\n'}
+[1.268383] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203942120] [scan_planner_interactive_node]: 2. \xe6\xb7\xbb\xe5\x8a\xa0\xe9\x9a\x9c\xe7\xa2\x8d\xe7\x89\xa9\xef\xbc\x88\xe4\xb8\x89\xe7\xa7\x8d\xe6\x96\xb9\xe6\xb3\x95\xe4\xbb\xbb\xe9\x80\x89\xef\xbc\x89\xef\xbc\x9a\n'}
+[1.268528] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203949768] [scan_planner_interactive_node]:    - \xe6\x96\xb9\xe6\xb3\x95A\xef\xbc\x9a\xe4\xbd\xbf\xe7\x94\xa8Publish Point\xe5\xb7\xa5\xe5\x85\xb7\xe7\x82\xb9\xe5\x87\xbb\xe5\x9c\xb0\xe5\x9b\xbe\n'}
+[1.268642] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203957160] [scan_planner_interactive_node]:    - \xe6\x96\xb9\xe6\xb3\x95B\xef\xbc\x9a\xe4\xbd\xbf\xe7\x94\xa82D Pose Estimate\xe5\xb7\xa5\xe5\x85\xb7\xe7\x82\xb9\xe5\x87\xbbGrid\xe4\xbb\xbb\xe6\x84\x8f\xe4\xbd\x8d\xe7\xbd\xae\xef\xbc\x88\xe6\x8e\xa8\xe8\x8d\x90\xef\xbc\x89\n'}
+[1.268751] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203964392] [scan_planner_interactive_node]:    - \xe6\x96\xb9\xe6\xb3\x95C\xef\xbc\x9a\xe5\x8f\x91\xe5\xb8\x83PointCloud2\xe5\x88\xb0 /rviz_input_obstacles\n'}
+[1.268858] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203971720] [scan_planner_interactive_node]: 3. \xe8\xa7\xa6\xe5\x8f\x91\xe8\xa7\x84\xe5\x88\x92\xef\xbc\x9aros2 topic pub /trigger_plan std_msgs/Bool "{data: true}"\n'}
+[1.268964] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203983304] [scan_planner_interactive_node]: 4. \xe5\x81\x9c\xe6\xad\xa2\xe8\xa7\x84\xe5\x88\x92\xef\xbc\x9aros2 topic pub /trigger_plan std_msgs/Bool "{data: false}"\n'}
+[1.269069] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203991720] [scan_planner_interactive_node]: 5. \xe6\x94\xaf\xe6\x8c\x81\xe5\xa4\x9a\xe6\xac\xa1\xe8\xa7\x84\xe5\x88\x92\xef\xbc\x9a\xe5\x8f\xaf\xe4\xbb\xa5\xe5\x8f\x8d\xe5\xa4\x8d\xe5\x8f\x91\xe9\x80\x81true/false\xe6\x8e\xa7\xe5\x88\xb6\xe8\xa7\x84\xe5\x88\x92\n'}
+[1.269173] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.203998856] [scan_planner_interactive_node]: \n'}
+[1.269288] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.204007080] [scan_planner_interactive_node]: === RViz2\xe8\xae\xbe\xe7\xbd\xae\xe6\xad\xa5\xe9\xaa\xa4 ===\n'}
+[1.269391] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.204014376] [scan_planner_interactive_node]: 1. \xe6\xb7\xbb\xe5\x8a\xa0Grid\xe6\x98\xbe\xe7\xa4\xba\n'}
+[1.269492] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.204021352] [scan_planner_interactive_node]: 2. \xe6\xb7\xbb\xe5\x8a\xa02D Nav Goal\xe5\xb7\xa5\xe5\x85\xb7\xef\xbc\x88\xe8\xaf\x9d\xe9\xa2\x98\xef\xbc\x9a/goal_pose\xef\xbc\x89\n'}
+[1.269597] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.204028584] [scan_planner_interactive_node]: 3. \xe6\xb7\xbb\xe5\x8a\xa02D Pose Estimate\xe5\xb7\xa5\xe5\x85\xb7\xef\xbc\x88\xe4\xbd\xbf\xe7\x94\xa8\xe9\xbb\x98\xe8\xae\xa4\xe8\xaf\x9d\xe9\xa2\x98\xef\xbc\x9a/initialpose\xef\xbc\x89\n'}
+[1.269701] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.204035656] [scan_planner_interactive_node]: 4. \xe6\xb7\xbb\xe5\x8a\xa0Publish Point\xe5\xb7\xa5\xe5\x85\xb7\xef\xbc\x88\xe4\xbd\xbf\xe7\x94\xa8\xe9\xbb\x98\xe8\xae\xa4\xe8\xaf\x9d\xe9\xa2\x98\xef\xbc\x9a/clicked_point\xef\xbc\x89\n'}
+[1.269804] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.204042504] [scan_planner_interactive_node]: 5. \xe6\xb7\xbb\xe5\x8a\xa0PointCloud2\xe6\x98\xbe\xe7\xa4\xba\xef\xbc\x88\xe8\xaf\x9d\xe9\xa2\x98\xef\xbc\x9a/visual_obstacles\xef\xbc\x89\n'}
+[1.269904] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.204049928] [scan_planner_interactive_node]: 6. \xe6\xb7\xbb\xe5\x8a\xa0Path\xe6\x98\xbe\xe7\xa4\xba\xef\xbc\x88\xe8\xaf\x9d\xe9\xa2\x98\xef\xbc\x9a/visual_global_path\xe5\x92\x8c/visual_local_trajectory\xef\xbc\x89\n'}
+[1.297650] (scan_planner) StdoutLine: {'line': b'1: [INFO] [1785135683.235483976] [scan_mid360_world_input_test]: Checking rejection of non-world input frames\n'}
+[1.303818] (-) TimerEvent: {}
+[1.384105] (scan_planner) StdoutLine: {'line': b"1: [motion_plan-1] [WARN] [1785135683.320743560] [scan_planner_interactive_node]: \xe5\xbf\xbd\xe7\x95\xa5\xe5\x85\xa8\xe5\xb1\x80\xe8\xb7\xaf\xe5\xbe\x84: frame_id='map', \xe6\x9c\x9f\xe6\x9c\x9b 'world'\n"}
+[1.404013] (-) TimerEvent: {}
+[1.404762] (scan_planner) StdoutLine: {'line': b"1: [motion_plan-1] [WARN] [1785135683.339803208] [scan_planner_interactive_node]: \xe5\xbf\xbd\xe7\x95\xa5\xe9\x87\x8c\xe7\xa8\x8b\xe8\xae\xa1: frame_id='map', \xe6\x9c\x9f\xe6\x9c\x9b 'world'\n"}
+[1.405379] (scan_planner) StdoutLine: {'line': b"1: [motion_plan-1] [WARN] [1785135683.340297416] [scan_planner_interactive_node]: \xe5\xbf\xbd\xe7\x95\xa5\xe7\x82\xb9\xe4\xba\x91: frame_id='map', \xe6\x9c\x9f\xe6\x9c\x9b 'world'; \xe5\xbd\x93\xe5\x89\x8d\xe9\x98\xb6\xe6\xae\xb5\xe4\xb8\x8d\xe6\x89\xa7\xe8\xa1\x8c TF \xe8\xbd\xac\xe6\x8d\xa2\n"}
+[1.405721] (scan_planner) StdoutLine: {'line': b"1: [motion_plan-1] [WARN] [1785135683.340622952] [scan_planner_interactive_node]: \xe5\xbf\xbd\xe7\x95\xa5\xe5\x85\xa8\xe5\xb1\x80\xe8\xb7\xaf\xe5\xbe\x84: frame_id='map', \xe6\x9c\x9f\xe6\x9c\x9b 'world'\n"}
+[1.469364] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [WARN] [1785135683.404180808] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.\n'}
+[1.471466] (scan_planner) StdoutLine: {'line': b'1: [INFO] [1785135683.409494024] [scan_mid360_world_input_test]: Publishing synthetic world odometry\n'}
+[1.504192] (-) TimerEvent: {}
+[1.604671] (-) TimerEvent: {}
+[1.671270] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [WARN] [1785135683.604227816] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.\n'}
+[1.704891] (-) TimerEvent: {}
+[1.805381] (-) TimerEvent: {}
+[1.867691] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [WARN] [1785135683.804243656] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.\n'}
+[1.905603] (-) TimerEvent: {}
+[1.978293] (scan_planner) StdoutLine: {'line': b'1: [INFO] [1785135683.913245000] [scan_mid360_world_input_test]: Publishing filtered cloud and 3D global path\n'}
+[1.979178] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.915835528] [scan_planner_interactive_node]: \xe5\xb1\x80\xe9\x83\xa8\xe4\xb8\x96\xe7\x95\x8c\xe7\xb3\xbb\xe9\x9a\x9c\xe7\xa2\x8d\xe7\x89\xa9: 2 \xe7\x82\xb9, \xe8\xbe\x93\xe5\x85\xa5=8 \xe7\x82\xb9\n'}
+[1.980627] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135683.916231272] [scan_planner_interactive_node]: \xe6\x94\xb6\xe5\x88\xb0\xe4\xb8\x96\xe7\x95\x8c\xe7\xb3\xbb\xe5\x85\xa8\xe5\xb1\x80\xe8\xb7\xaf\xe5\xbe\x84: 3 \xe4\xb8\xaa\xe7\x82\xb9\n'}
+[2.005771] (-) TimerEvent: {}
+[2.070754] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [WARN] [1785135684.004125736] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.\n'}
+[2.072214] (scan_planner) StdoutLine: {'line': b'1: [INFO] [1785135684.010216712] [scan_mid360_world_input_test]: Triggering planning\n'}
+[2.075299] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135684.011170120] [scan_planner_interactive_node]: \xe6\x94\xb6\xe5\x88\xb0 /trigger_plan=true\xef\xbc\x8c\xe5\xb7\xb2\xe8\xa7\xa6\xe5\x8f\x91\xe4\xb8\x96\xe7\x95\x8c\xe7\xb3\xbb\xe8\xa7\x84\xe5\x88\x92\n'}
+[2.105973] (-) TimerEvent: {}
+[2.206505] (-) TimerEvent: {}
+[2.270860] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] \x1b[32miter(+1)=46,time(ms)=0.733,total_t(ms)=0.734,cost=5.383\n'}
+[2.271827] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [PlannerInterface] post-opt z=      1 1.00741 1.01481 1.02222 1.02963 1.03704 1.04444 1.05185 1.05926 1.06667 1.07407 1.08148 1.08889  1.0963  1.1037 1.11111 1.11852 1.12593 1.13333 1.14074 1.14815 1.15556 1.16296 1.17037 1.17778 1.18519 1.19259     1.2\n'}
+[2.280789] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] \x1b[0mfirst_optimize_step_success=1\n'}
+[2.286455] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] Need to reallocate time.\n'}
+[2.292335] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [PlannerInterface] sampled first pos=0.0427125         0   1.00741\n'}
+[2.292947] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135684.208816808] [scan_planner_interactive_node]: \xe8\xa7\x84\xe5\x88\x92\xe5\xae\x8c\xe6\x88\x90: \xe5\x8f\x82\xe8\x80\x83\xe8\xb7\xaf\xe5\xbe\x84=3 \xe7\x82\xb9, \xe5\xb1\x80\xe9\x83\xa8\xe9\x9a\x9c\xe7\xa2\x8d\xe7\x89\xa9=2 \xe7\x82\xb9\n'}
+[2.293276] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [WARN] [1785135684.209292552] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.\n'}
+[2.294492] (scan_planner) StdoutLine: {'line': b'1: [INFO] [1785135684.232359080] [scan_mid360_world_input_test]: PASS: world input, XYZ filtering, path Z, local planning and inflation; A* markers observed=0\n'}
+[2.306459] (scan_planner) StdoutLine: {'line': b'1: ok\n'}
+[2.307031] (-) TimerEvent: {}
+[2.307606] (scan_planner) StdoutLine: {'line': b'1: \n'}
+[2.308208] (scan_planner) StdoutLine: {'line': b'1: ----------------------------------------------------------------------\n'}
+[2.308478] (scan_planner) StdoutLine: {'line': b'1: Ran 1 test in 1.189s\n'}
+[2.308720] (scan_planner) StdoutLine: {'line': b'1: \n'}
+[2.308954] (scan_planner) StdoutLine: {'line': b'1: OK\n'}
+[2.407284] (-) TimerEvent: {}
+[2.470556] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [WARN] [1785135684.404057032] [scan_planner_interactive_node]: a_star_pathes_ is empty, no trajectories to publish.\n'}
+[2.471504] (scan_planner) StdoutLine: {'line': b"1: [INFO] [motion_plan-1]: sending signal 'SIGINT' to process[motion_plan-1]\n"}
+[2.473300] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] [INFO] [1785135684.409537224] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n'}
+[2.507477] (-) TimerEvent: {}
+[2.608011] (-) TimerEvent: {}
+[2.650071] (scan_planner) StdoutLine: {'line': b'1: [motion_plan-1] MotionPlanner Total Running Time: 2  ms \n'}
+[2.673329] (scan_planner) StdoutLine: {'line': b'1: [INFO] [motion_plan-1]: process has finished cleanly [pid 51]\n'}
+[2.674791] (scan_planner) StdoutLine: {'line': b'1: \n'}
+[2.675323] (scan_planner) StdoutLine: {'line': b'1: ----------------------------------------------------------------------\n'}
+[2.675647] (scan_planner) StdoutLine: {'line': b'1: Ran 0 tests in 0.000s\n'}
+[2.675937] (scan_planner) StdoutLine: {'line': b'1: \n'}
+[2.676211] (scan_planner) StdoutLine: {'line': b'1: OK\n'}
+[2.708224] (-) TimerEvent: {}
+[2.808704] (-) TimerEvent: {}
+[2.909151] (-) TimerEvent: {}
+[3.009856] (-) TimerEvent: {}
+[3.020700] (scan_planner) StdoutLine: {'line': b'1: -- run_test.py: return code 0\n'}
+[3.021152] (scan_planner) StdoutLine: {'line': b"1: -- run_test.py: verify result file '/home/amov/scan_ws/build/scan_planner/test_results/scan_planner/test_test_scan_mid360_world_input_launch.py.xunit.xml'\n"}
+[3.058700] (scan_planner) StdoutLine: {'line': b'1/1 Test #1: test_test_scan_mid360_world_input_launch.py ...   Passed    3.00 sec\n'}
+[3.059703] (scan_planner) StdoutLine: {'line': b'\n'}
+[3.060080] (scan_planner) StdoutLine: {'line': b'100% tests passed, 0 tests failed out of 1\n'}
+[3.060348] (scan_planner) StdoutLine: {'line': b'\n'}
+[3.060590] (scan_planner) StdoutLine: {'line': b'Label Time Summary:\n'}
+[3.060819] (scan_planner) StdoutLine: {'line': b'launch_test    =   3.00 sec*proc (1 test)\n'}
+[3.061033] (scan_planner) StdoutLine: {'line': b'\n'}
+[3.061241] (scan_planner) StdoutLine: {'line': b'Total Test time (real) =   3.00 sec\n'}
+[3.066469] (scan_planner) CommandEnded: {'returncode': 0}
+[3.069048] (scan_planner) JobEnded: {'identifier': 'scan_planner', 'rc': 0}
+[3.070450] (-) EventReactorShutdown: {}

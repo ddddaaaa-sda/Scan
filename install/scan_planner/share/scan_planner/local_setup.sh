@@ -1,0 +1,1 @@
+/home/amov/scan_ws/build/scan_planner/ament_cmake_environment_hooks/local_setup.sh

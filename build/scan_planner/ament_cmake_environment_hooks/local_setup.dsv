@@ -1,0 +1,2 @@
+source;share/scan_planner/environment/ament_prefix_path.sh
+source;share/scan_planner/environment/path.sh

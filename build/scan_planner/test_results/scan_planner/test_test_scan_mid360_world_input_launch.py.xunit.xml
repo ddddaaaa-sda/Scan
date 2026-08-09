@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="scan_planner.test_scan_mid360_world_input_launch" tests="1" failures="0" errors="0" time="1.17"><testsuite name="scan_planner.test_scan_mid360_world_input_launch.launch_tests" tests="1" failures="0" errors="0" skipped="0" time="1.17"><testcase classname="scan_planner.TestScanMid360WorldInput" name="test_world_input_pipeline" time="1.17" /></testsuite></testsuites>

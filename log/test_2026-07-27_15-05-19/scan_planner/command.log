@@ -1,0 +1,2 @@
+Invoking command in '/home/amov/scan_ws/build/scan_planner': /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process --rerun-failed --output-on-failure
+Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process --rerun-failed --output-on-failure

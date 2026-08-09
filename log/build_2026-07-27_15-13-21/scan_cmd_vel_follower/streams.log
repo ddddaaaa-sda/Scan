@@ -1,0 +1,21 @@
+[1.065s] Invoking command in '/home/amov/scan_ws/src/scan_cmd_vel_follower': PYTHONPATH=/home/amov/scan_ws/build/scan_cmd_vel_follower/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/scan_cmd_vel_follower build --build-base /home/amov/scan_ws/build/scan_cmd_vel_follower/build install --record /home/amov/scan_ws/build/scan_cmd_vel_follower/install.log --install-scripts $base/lib/scan_cmd_vel_follower --single-version-externally-managed install_data
+[1.529s] running egg_info
+[1.531s] writing ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/PKG-INFO
+[1.531s] writing dependency_links to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/dependency_links.txt
+[1.531s] writing entry points to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/entry_points.txt
+[1.532s] writing requirements to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/requires.txt
+[1.532s] writing top-level names to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/top_level.txt
+[1.535s] reading manifest file '../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/SOURCES.txt'
+[1.537s] writing manifest file '../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/SOURCES.txt'
+[1.537s] running build
+[1.537s] running build_py
+[1.537s] running install
+[1.538s] running install_lib
+[1.541s] running install_data
+[1.541s] running install_egg_info
+[1.546s] removing '/home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower-0.1.0-py3.10.egg-info' (and everything under it)
+[1.547s] Copying ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info to /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower-0.1.0-py3.10.egg-info
+[1.548s] running install_scripts
+[1.594s] Installing scan_cmd_vel_follower script to /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/scan_cmd_vel_follower
+[1.595s] writing list of installed files to '/home/amov/scan_ws/build/scan_cmd_vel_follower/install.log'
+[1.680s] Invoked command in '/home/amov/scan_ws/src/scan_cmd_vel_follower' returned '0': PYTHONPATH=/home/amov/scan_ws/build/scan_cmd_vel_follower/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/scan_cmd_vel_follower build --build-base /home/amov/scan_ws/build/scan_cmd_vel_follower/build install --record /home/amov/scan_ws/build/scan_cmd_vel_follower/install.log --install-scripts $base/lib/scan_cmd_vel_follower --single-version-externally-managed install_data

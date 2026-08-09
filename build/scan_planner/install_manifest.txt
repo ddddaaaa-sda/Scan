@@ -1,0 +1,1 @@
+/home/amov/scan_ws/install/scan_planner/lib/scan_planner/scan_mid360_world_input_test

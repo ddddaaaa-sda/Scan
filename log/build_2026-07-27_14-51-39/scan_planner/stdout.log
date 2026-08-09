@@ -1,0 +1,42 @@
+Consolidate compiler generated dependencies of target local_map
+[  8%] Building CXX object planner/plan_env/CMakeFiles/local_map.dir/src/grid_map.cpp.o
+[ 16%] Built target local_map
+Consolidate compiler generated dependencies of target path_searching
+[ 25%] Building CXX object planner/path_searching/CMakeFiles/path_searching.dir/src/dyn_a_star.cpp.o
+[ 33%] Built target path_searching
+Consolidate compiler generated dependencies of target bspline_opt
+[ 50%] Building CXX object planner/bspline_opt/CMakeFiles/bspline_opt.dir/src/uniform_bspline.cpp.o
+[ 50%] Building CXX object planner/bspline_opt/CMakeFiles/bspline_opt.dir/src/gradient_descent_optimizer.cpp.o
+[ 58%] Building CXX object planner/bspline_opt/CMakeFiles/bspline_opt.dir/src/bspline_optimizer.cpp.o
+[ 66%] Built target bspline_opt
+Consolidate compiler generated dependencies of target scan_planner
+[ 75%] Building CXX object planner/plan_manage/CMakeFiles/scan_planner.dir/src/planner_interface.cpp.o
+[ 83%] Built target scan_planner
+Consolidate compiler generated dependencies of target motion_plan
+[ 91%] Building CXX object CMakeFiles/motion_plan.dir/src/trajectory_publisher.cpp.o
+[100%] Linking CXX executable motion_plan
+[100%] Built target motion_plan
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/lib/scan_planner/motion_plan
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/launch/__pycache__/scan_mid360_test.launch.cpython-310.pyc
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/launch/scan_mid360_test.launch.py
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/launch/scan_planner.launch.py
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/config/scan_mid360.yaml
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/rviz/rviz.rviz
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/package_run_dependencies/scan_planner
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/parent_prefix_path/scan_planner
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.sh
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.dsv
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.bash
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.sh
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.zsh
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.dsv
+-- Symlinking: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.dsv
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/packages/scan_planner
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig.cmake
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig-version.cmake
+-- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.xml
+-- Up-to-date: /home/amov/scan_ws/install/scan_planner/lib/scan_planner/scan_mid360_world_input_test

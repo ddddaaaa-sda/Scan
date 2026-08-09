@@ -1,0 +1,3 @@
+[console_scripts]
+scan_cmd_vel_follower = scan_cmd_vel_follower.follower_node:main
+

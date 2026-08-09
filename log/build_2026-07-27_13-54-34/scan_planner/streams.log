@@ -1,0 +1,32 @@
+[0.021s] Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner -- -j8 -l8
+[0.138s] [ 16%] Built target local_map
+[0.196s] [ 33%] Built target path_searching
+[0.263s] [ 66%] Built target bspline_opt
+[0.321s] [ 83%] Built target scan_planner
+[0.381s] [ 91%] Building CXX object CMakeFiles/motion_plan.dir/src/trajectory_publisher.cpp.o
+[90.454s] [100%] Linking CXX executable motion_plan
+[92.372s] [100%] Built target motion_plan
+[92.399s] Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner -- -j8 -l8
+[92.424s] Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner
+[92.441s] -- Install configuration: "Release"
+[92.441s] -- Installing: /home/amov/scan_ws/install/scan_planner/lib/scan_planner/motion_plan
+[92.588s] -- Set runtime path of "/home/amov/scan_ws/install/scan_planner/lib/scan_planner/motion_plan" to ""
+[92.589s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/launch
+[92.589s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/launch/scan_planner.launch.py
+[92.589s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/rviz/rviz.rviz
+[92.589s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/package_run_dependencies/scan_planner
+[92.589s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/parent_prefix_path/scan_planner
+[92.589s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.sh
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.dsv
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.sh
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.dsv
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.bash
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.sh
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.zsh
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.dsv
+[92.590s] -- Installing: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.dsv
+[92.590s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/packages/scan_planner
+[92.591s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig.cmake
+[92.591s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig-version.cmake
+[92.591s] -- Up-to-date: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.xml
+[92.594s] Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner

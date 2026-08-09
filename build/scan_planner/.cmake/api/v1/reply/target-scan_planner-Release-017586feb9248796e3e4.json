@@ -1,0 +1,219 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "planner/plan_manage/libscan_planner.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"planner/plan_manage/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 20,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 26,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 27,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 28,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 29,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG -O3 -std=c++17 -g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/./planner/bspline_opt/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/./planner/path_searching/include"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/./planner/plan_env/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/./planner/plan_manage/include/plan_manage"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/./planner/plan_manage/include"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/./planner/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/planner/plan_manage/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/planner/plan_manage/include/plan_manage"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/planner/plan_manage/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/planner/bspline_opt/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/planner/path_searching/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master/planner/plan_env/include"
+				},
+				{
+					"backtrace" : 12,
+					"isSystem" : true,
+					"path" : "/usr/include/eigen3"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "bspline_opt::@84ae5fa631832db20cdf"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "path_searching::@b139507b1220a17115cd"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "local_map::@520482818db57458309a"
+		}
+	],
+	"id" : "scan_planner::@ee0154656c3e3d301e18",
+	"name" : "scan_planner",
+	"nameOnDisk" : "libscan_planner.a",
+	"paths" : 
+	{
+		"build" : "planner/plan_manage",
+		"source" : "planner/plan_manage"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "planner/plan_manage/src/planner_interface.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info
+writing ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/PKG-INFO
+writing dependency_links to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/dependency_links.txt
+writing entry points to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/entry_points.txt
+writing requirements to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/requires.txt
+writing top-level names to ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/top_level.txt
+writing manifest file '../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/SOURCES.txt'
+reading manifest file '../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/SOURCES.txt'
+writing manifest file '../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/amov/scan_ws/build/scan_cmd_vel_follower/build
+creating /home/amov/scan_ws/build/scan_cmd_vel_follower/build/lib
+creating /home/amov/scan_ws/build/scan_cmd_vel_follower/build/lib/scan_cmd_vel_follower
+copying scan_cmd_vel_follower/__init__.py -> /home/amov/scan_ws/build/scan_cmd_vel_follower/build/lib/scan_cmd_vel_follower
+copying scan_cmd_vel_follower/follower_node.py -> /home/amov/scan_ws/build/scan_cmd_vel_follower/build/lib/scan_cmd_vel_follower
+running install
+running install_lib
+creating /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower
+copying /home/amov/scan_ws/build/scan_cmd_vel_follower/build/lib/scan_cmd_vel_follower/__init__.py -> /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower
+copying /home/amov/scan_ws/build/scan_cmd_vel_follower/build/lib/scan_cmd_vel_follower/follower_node.py -> /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower
+byte-compiling /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower/follower_node.py to follower_node.cpython-310.pyc
+running install_data
+creating /home/amov/scan_ws/install/scan_cmd_vel_follower/share/ament_index
+creating /home/amov/scan_ws/install/scan_cmd_vel_follower/share/ament_index/resource_index
+creating /home/amov/scan_ws/install/scan_cmd_vel_follower/share/ament_index/resource_index/packages
+copying resource/scan_cmd_vel_follower -> /home/amov/scan_ws/install/scan_cmd_vel_follower/share/ament_index/resource_index/packages
+copying package.xml -> /home/amov/scan_ws/install/scan_cmd_vel_follower/share/scan_cmd_vel_follower
+creating /home/amov/scan_ws/install/scan_cmd_vel_follower/share/scan_cmd_vel_follower/config
+copying config/follower.yaml -> /home/amov/scan_ws/install/scan_cmd_vel_follower/share/scan_cmd_vel_follower/config
+creating /home/amov/scan_ws/install/scan_cmd_vel_follower/share/scan_cmd_vel_follower/launch
+copying launch/scan_cmd_vel_follower.launch.py -> /home/amov/scan_ws/install/scan_cmd_vel_follower/share/scan_cmd_vel_follower/launch
+running install_egg_info
+Copying ../../build/scan_cmd_vel_follower/scan_cmd_vel_follower.egg-info to /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/python3.10/site-packages/scan_cmd_vel_follower-0.1.0-py3.10.egg-info
+running install_scripts
+Installing scan_cmd_vel_follower script to /home/amov/scan_ws/install/scan_cmd_vel_follower/lib/scan_cmd_vel_follower
+writing list of installed files to '/home/amov/scan_ws/build/scan_cmd_vel_follower/install.log'

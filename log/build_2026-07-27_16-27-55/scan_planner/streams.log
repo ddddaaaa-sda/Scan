@@ -1,0 +1,73 @@
+[30.038s] Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner -- -j8 -l8
+[30.087s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[30.323s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[30.345s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[30.418s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[30.423s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[30.433s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[30.449s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[30.467s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[30.515s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[30.517s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[30.679s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[30.757s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[30.799s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[30.806s] -- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+[30.918s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[30.950s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[31.121s] -- Configuring done
+[31.170s] -- Generating done
+[31.187s] -- Build files have been written to: /home/amov/scan_ws/build/scan_planner
+[31.244s] gmake[2]: Warning: File 'planner/plan_env/CMakeFiles/local_map.dir/flags.make' has modification time 12912 s in the future
+[31.272s] Consolidate compiler generated dependencies of target local_map
+[31.275s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.281s] gmake[2]: Warning: File 'planner/plan_env/CMakeFiles/local_map.dir/flags.make' has modification time 12912 s in the future
+[31.282s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.298s] [ 16%] Built target local_map
+[31.302s] gmake[2]: Warning: File 'planner/path_searching/CMakeFiles/path_searching.dir/flags.make' has modification time 12912 s in the future
+[31.330s] Consolidate compiler generated dependencies of target path_searching
+[31.333s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.340s] gmake[2]: Warning: File 'planner/path_searching/CMakeFiles/path_searching.dir/flags.make' has modification time 12912 s in the future
+[31.343s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.359s] [ 33%] Built target path_searching
+[31.365s] gmake[2]: Warning: File 'planner/bspline_opt/CMakeFiles/bspline_opt.dir/flags.make' has modification time 12912 s in the future
+[31.394s] Consolidate compiler generated dependencies of target bspline_opt
+[31.396s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.404s] gmake[2]: Warning: File 'planner/bspline_opt/CMakeFiles/bspline_opt.dir/flags.make' has modification time 12912 s in the future
+[31.407s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.425s] [ 66%] Built target bspline_opt
+[31.430s] gmake[2]: Warning: File 'planner/plan_manage/CMakeFiles/scan_planner.dir/flags.make' has modification time 12912 s in the future
+[31.457s] Consolidate compiler generated dependencies of target scan_planner
+[31.460s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.466s] gmake[2]: Warning: File 'planner/plan_manage/CMakeFiles/scan_planner.dir/flags.make' has modification time 12912 s in the future
+[31.469s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.487s] [ 83%] Built target scan_planner
+[31.493s] gmake[2]: Warning: File 'CMakeFiles/motion_plan.dir/flags.make' has modification time 12912 s in the future
+[31.528s] Consolidate compiler generated dependencies of target motion_plan
+[31.531s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.541s] gmake[2]: Warning: File 'CMakeFiles/motion_plan.dir/flags.make' has modification time 12912 s in the future
+[31.546s] gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[31.562s] [100%] Built target motion_plan
+[31.586s] Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/amov/scan_ws/build/scan_planner -- -j8 -l8
+[31.609s] Invoking command in '/home/amov/scan_ws/build/scan_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner
+[31.631s] -- Install configuration: "Release"
+[31.633s] -- Execute custom install script
+[31.633s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/lib/scan_planner/motion_plan
+[31.634s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/launch/scan_planner.launch.py
+[31.635s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/rviz/rviz.rviz
+[31.635s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/package_run_dependencies/scan_planner
+[31.636s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/parent_prefix_path/scan_planner
+[31.636s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.sh
+[31.636s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/ament_prefix_path.dsv
+[31.636s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.sh
+[31.636s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/environment/path.dsv
+[31.636s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.bash
+[31.637s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.sh
+[31.638s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.zsh
+[31.638s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/local_setup.dsv
+[31.638s] -- Symlinking: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.dsv
+[31.657s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/ament_index/resource_index/packages/scan_planner
+[31.658s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig.cmake
+[31.658s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/cmake/scan_plannerConfig-version.cmake
+[31.658s] -- Up-to-date symlink: /home/amov/scan_ws/install/scan_planner/share/scan_planner/package.xml
+[31.664s] Invoked command in '/home/amov/scan_ws/build/scan_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/amov/scan_ws/build/scan_planner

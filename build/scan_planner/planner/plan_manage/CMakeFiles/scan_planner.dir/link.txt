@@ -1,0 +1,2 @@
+/usr/bin/ar qc libscan_planner.a CMakeFiles/scan_planner.dir/src/planner_interface.cpp.o
+/usr/bin/ranlib libscan_planner.a

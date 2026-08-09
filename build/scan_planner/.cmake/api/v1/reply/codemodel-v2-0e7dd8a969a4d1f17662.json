@@ -1,0 +1,182 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-ec8deb85876cfdb064d8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "planner/plan_manage",
+					"jsonFile" : "directory-planner.plan_manage-Release-1395be4d5190432437b0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "planner/plan_manage",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "planner/bspline_opt",
+					"jsonFile" : "directory-planner.bspline_opt-Release-5d9876c6c6c56f539c47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "planner/bspline_opt",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "planner/path_searching",
+					"jsonFile" : "directory-planner.path_searching-Release-736113f60c83b0aafc9f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "planner/path_searching",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "planner/plan_env",
+					"jsonFile" : "directory-planner.plan_env-Release-e84440845bc0fd62efcf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "planner/plan_env",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "scan_planner",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "bspline_opt::@84ae5fa631832db20cdf",
+					"jsonFile" : "target-bspline_opt-Release-30e411475bec18eb488d.json",
+					"name" : "bspline_opt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "local_map::@520482818db57458309a",
+					"jsonFile" : "target-local_map-Release-cb6021ab338e34fb0c7c.json",
+					"name" : "local_map",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motion_plan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motion_plan-Release-82f41d06a967e4005a86.json",
+					"name" : "motion_plan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "path_searching::@b139507b1220a17115cd",
+					"jsonFile" : "target-path_searching-Release-9e3eb732211416ff22fa.json",
+					"name" : "path_searching",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "scan_planner::@ee0154656c3e3d301e18",
+					"jsonFile" : "target-scan_planner-Release-017586feb9248796e3e4.json",
+					"name" : "scan_planner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scan_planner_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scan_planner_uninstall-Release-4feeef8c645969ce5e32.json",
+					"name" : "scan_planner_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-82a5cee6df97c23e41b1.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/amov/scan_ws/build/scan_planner",
+		"source" : "/home/amov/scan_ws/src/SCAN-Planner-Pure-ROS2-master"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
