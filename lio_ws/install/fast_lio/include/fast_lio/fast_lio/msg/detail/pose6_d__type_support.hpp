@@ -1,0 +1,1 @@
+/home/amov/lio_ws/build/fast_lio/rosidl_generator_cpp/fast_lio/msg/detail/pose6_d__type_support.hpp
