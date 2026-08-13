@@ -144,7 +144,47 @@ source install/setup.bash
 
 rviz2 -d install/scan_planner/share/scan_planner/rviz/rviz.rviz
 ```
-### 6. RViz2 交互操作
+
+### 6. 导出 RViz2 中显示的 3D 点云
+
+RViz2 负责显示点云，导出时需要订阅对应的 `PointCloud2` 话题并保存到文件。项目内置了 `export_pointcloud2` 工具，可导出 `.pcd`、`.ply` 或 `.csv`。
+
+导出 RViz2 默认显示的 MID360 世界点云：
+
+```bash
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+
+ros2 run scan_planner export_pointcloud2 \
+  --topic /robot_0/cloud_registered_world \
+  --seconds 5 \
+  --output exports/mid360_world.pcd
+```
+
+如果使用上位机启动脚本，FAST-LIO 点云话题通常是 `/cloud_registered`，可这样导出：
+
+```bash
+ros2 run scan_planner export_pointcloud2 \
+  --topic /cloud_registered \
+  --seconds 5 \
+  --output exports/cloud_registered.ply
+```
+
+也可以导出规划器处理后的点云：
+
+```bash
+ros2 run scan_planner export_pointcloud2 --topic /visual_obstacles --output exports/visual_obstacles.pcd
+ros2 run scan_planner export_pointcloud2 --topic /inflated_cloud --output exports/inflated_cloud.csv
+```
+
+常用参数：
+
+* `--seconds 0`：只保存收到的第一帧；
+* `--frames N`：累计 N 帧后导出；
+* `--qos reliable`：当话题发布端使用 Reliable QoS 时切换；
+* `--max-points N`：限制导出的最大点数。
+
+### 7. RViz2 交互操作
 
 启动项目后，可通过 RViz2 依次设置全局目标点、模拟障碍物和机器人起点。
 

@@ -17,7 +17,7 @@ setup(
     zip_safe=True,
     maintainer="amov",
     maintainer_email="amov@example.com",
-    description="Conservative path follower for SCAN-Planner debug Twist output.",
+    description="Conservative path follower for SCAN-Planner Twist output.",
     license="Apache-2.0",
     entry_points={
         "console_scripts": [

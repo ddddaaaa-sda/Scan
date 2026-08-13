@@ -32,7 +32,7 @@ class ScanCmdVelFollower(Node):
 
         self.path_topic = self.declare_parameter("path_topic", "/visual_local_trajectory").value
         self.odom_topic = self.declare_parameter("odom_topic", "/Odometry").value
-        self.cmd_topic = self.declare_parameter("cmd_topic", "/scan_cmd_vel_debug").value
+        self.cmd_topic = self.declare_parameter("cmd_topic", "/cmd_vel").value
         self.planning_frame = self.declare_parameter("planning_frame", "camera_init").value
 
         self.lookahead_distance = float(self.declare_parameter("lookahead_distance", 0.6).value)

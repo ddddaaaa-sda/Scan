@@ -68,7 +68,7 @@ COMMON_ENV="set +u; source /opt/ros/humble/setup.bash; set -u; export ROS_DOMAIN
 start_bg livox "$COMMON_ENV; cd '$LIVOX_WS'; set +u; source install/setup.bash; set -u; exec ros2 launch livox_ros_driver2 msg_MID360_launch.py"
 wait_for_topic "/livox/lidar" 30 || true
 
-start_bg fast_lio "$COMMON_ENV; cd '$LIO_WS'; set +u; source '$LIVOX_WS/install/setup.bash'; source install/setup.bash; set -u; exec ros2 launch fast_lio mapping.launch.py config_file:=mid360.yaml"
+start_bg fast_lio "$COMMON_ENV; cd '$LIO_WS'; set +u; source '$LIVOX_WS/install/setup.bash'; source install/setup.bash; set -u; exec ros2 launch fast_lio mapping.launch.py config_file:=mid360.yaml rviz_cfg:='$SCAN_WS/config/fastlio_scan.rviz'"
 wait_for_topic "/Odometry" 45 || true
 wait_for_topic "/cloud_registered" 45 || true
 

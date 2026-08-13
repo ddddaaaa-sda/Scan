@@ -66,6 +66,11 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
   RENAME scan_mid360_world_input_test)
 
+install(PROGRAMS
+  scripts/export_pointcloud2.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME export_pointcloud2)
+
 install(DIRECTORY
   launch
   config

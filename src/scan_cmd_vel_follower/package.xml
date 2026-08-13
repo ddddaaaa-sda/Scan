@@ -3,7 +3,7 @@
 <package format="3">
   <name>scan_cmd_vel_follower</name>
   <version>0.1.0</version>
-  <description>Conservative path follower that converts SCAN-Planner local paths into debug Twist commands.</description>
+  <description>Conservative path follower that converts SCAN-Planner local paths into Twist commands.</description>
   <maintainer email="amov@example.com">amov</maintainer>
   <license>Apache-2.0</license>
 

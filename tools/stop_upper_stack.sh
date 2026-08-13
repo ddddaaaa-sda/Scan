@@ -8,7 +8,7 @@ source /opt/ros/humble/setup.bash
 set -u
 
 if command -v ros2 >/dev/null 2>&1; then
-  ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist \
+  timeout 3 ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist \
     "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}" \
     >/dev/null 2>&1 || true
 fi
@@ -21,6 +21,11 @@ for name in follower scan_planner fast_lio livox; do
   fi
 done
 
+if pgrep -f "rviz2" >/dev/null 2>&1; then
+  echo "Stopping rviz2 ..."
+  pkill -f "rviz2" 2>/dev/null || true
+fi
+
 sleep 2
 
 for name in follower scan_planner fast_lio livox; do
@@ -31,5 +36,10 @@ for name in follower scan_planner fast_lio livox; do
   fi
   rm -f "$pid_file"
 done
+
+if pgrep -f "rviz2" >/dev/null 2>&1; then
+  echo "Force stopping rviz2 ..."
+  pkill -9 -f "rviz2" 2>/dev/null || true
+fi
 
 echo "Upper stack stopped."

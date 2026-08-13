@@ -54,7 +54,9 @@ private:
     // 发布函数
     void publish_global_path();
     void publish_planned_trajectory();
+    void publish_traveled_path();
     void publish_obstacles();
+    void publish_elevation_cloud();
     void publish_a_star_path();
     void publish_local_obstacles();
 
@@ -81,7 +83,9 @@ private:
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr global_path_pub_;
     rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr a_star_path_pub_;
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr local_traj_pub_;
+    rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr traveled_path_pub_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr obs_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr elevation_cloud_pub_;
 
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr inflated_cloud_pub_;
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr inflated_marker_pub_;
@@ -115,6 +119,7 @@ private:
     bool has_global_path_;
     bool flag_ = false;
     std::vector<scan_planner::PathPoint> planned_traj;
+    std::vector<scan_planner::PathPoint> traveled_traj_;
 
     scan_planner::PathPoint cur_pose_{0.0F, 0.0F, 0.2F, 0.0F, 0.0F};
 
@@ -144,6 +149,9 @@ private:
     double self_filter_z_ = 1.10;
     double voxel_size_ = 0.08;
     int max_obstacle_points_ = 60000;
+    double traveled_path_min_step_ = 0.05;
+    double elevation_grid_resolution_ = 0.12;
+    double planning_period_ms_ = 100.0;
 
     double theta_ = 0.0;
 };

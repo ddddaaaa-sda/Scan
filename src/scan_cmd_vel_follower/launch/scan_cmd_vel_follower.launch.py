@@ -23,7 +23,7 @@ def generate_launch_description():
         [
             DeclareLaunchArgument("path_topic", default_value="/visual_local_trajectory"),
             DeclareLaunchArgument("odom_topic", default_value="/Odometry"),
-            DeclareLaunchArgument("cmd_topic", default_value="/scan_cmd_vel_debug"),
+            DeclareLaunchArgument("cmd_topic", default_value="/cmd_vel"),
             DeclareLaunchArgument("planning_frame", default_value="camera_init"),
             DeclareLaunchArgument("max_linear_x", default_value="0.08"),
             DeclareLaunchArgument("max_angular_z", default_value="0.18"),

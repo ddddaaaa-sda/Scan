@@ -14,6 +14,7 @@
 #include <cstdint>
 #include <limits>
 #include <stdexcept>
+#include <unordered_map>
 #include <unordered_set>
 
 #include "geometry_msgs/msg/quaternion.hpp"
@@ -47,6 +48,27 @@ struct VoxelKeyHash
         return seed;
     }
 };
+
+struct Grid2DKey
+{
+    std::int64_t x;
+    std::int64_t y;
+
+    bool operator==(const Grid2DKey& other) const
+    {
+        return x == other.x && y == other.y;
+    }
+};
+
+struct Grid2DKeyHash
+{
+    std::size_t operator()(const Grid2DKey& key) const
+    {
+        std::size_t seed = std::hash<std::int64_t>{}(key.x);
+        seed ^= std::hash<std::int64_t>{}(key.y) + 0x9e3779b9U + (seed << 6U) + (seed >> 2U);
+        return seed;
+    }
+};
 }  // namespace
 
 TrajectoryAndObstaclesPublisher::TrajectoryAndObstaclesPublisher() 
@@ -74,6 +96,8 @@ TrajectoryAndObstaclesPublisher::TrajectoryAndObstaclesPublisher()
     self_filter_z_ = this->declare_parameter<double>("self_filter_z", self_filter_z_);
     voxel_size_ = this->declare_parameter<double>("voxel_size", voxel_size_);
     max_obstacle_points_ = this->declare_parameter<int>("max_obstacle_points", max_obstacle_points_);
+    elevation_grid_resolution_ = this->declare_parameter<double>("elevation_grid_resolution", elevation_grid_resolution_);
+    planning_period_ms_ = this->declare_parameter<double>("planning_period_ms", planning_period_ms_);
 
     local_range_x_ = std::max(0.0, local_range_x_);
     local_range_y_ = std::max(0.0, local_range_y_);
@@ -84,13 +108,17 @@ TrajectoryAndObstaclesPublisher::TrajectoryAndObstaclesPublisher()
     self_filter_z_ = std::max(0.0, self_filter_z_);
     voxel_size_ = std::max(1e-3, voxel_size_);
     max_obstacle_points_ = std::max(1, max_obstacle_points_);
+    elevation_grid_resolution_ = std::max(1e-3, elevation_grid_resolution_);
+    planning_period_ms_ = std::max(20.0, planning_period_ms_);
 
     // 1. 创建发布者（可视化用）
     global_path_pub_ = this->create_publisher<nav_msgs::msg::Path>("visual_global_path", 10);
     // a_star_path_pub_ = this->create_publisher<nav_msgs::msg::Path>("visual_astar_path", 10);
     a_star_path_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("trajectories", 10);
     local_traj_pub_ = this->create_publisher<nav_msgs::msg::Path>("visual_local_trajectory", 10);
+    traveled_path_pub_ = this->create_publisher<nav_msgs::msg::Path>("visual_traveled_path", 10);
     obs_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("visual_obstacles", 10);
+    elevation_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("scan_elevation_cloud", qos);
     // obs_local_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("visual_local_obstacles", 10);
 
     inflated_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("inflated_cloud", qos);
@@ -149,9 +177,9 @@ TrajectoryAndObstaclesPublisher::TrajectoryAndObstaclesPublisher()
     // 4. 初始化SCAN-Planner基础配置
     init_scan_planner_base();
 
-    // 5. 定时器：5Hz触发规划与发布
+    // 5. 定时器：默认 10Hz 触发规划与发布
     timer_ = this->create_wall_timer(
-        std::chrono::milliseconds(200),
+        std::chrono::milliseconds(static_cast<int>(planning_period_ms_)),
         std::bind(&TrajectoryAndObstaclesPublisher::publish_and_plan, this)
     );
 
@@ -214,6 +242,9 @@ void TrajectoryAndObstaclesPublisher::odom_callback(const nav_msgs::msg::Odometr
     cur_pose_.v = static_cast<float>(std::hypot(
         msg->twist.twist.linear.x, msg->twist.twist.linear.y));
     has_odom_ = true;
+    if (traveled_traj_.empty() || distance(traveled_traj_.back(), cur_pose_) >= traveled_path_min_step_) {
+        traveled_traj_.push_back(cur_pose_);
+    }
     if (should_plan_ && has_cloud_ && has_global_path_) {
         needs_replan_ = true;
     }
@@ -546,8 +577,10 @@ void TrajectoryAndObstaclesPublisher::publish_and_plan()
 
     // 发布所有可视化数据（无论是否更新，保持实时显示）
     publish_global_path();
+    publish_traveled_path();
     publish_planned_trajectory();
     publish_obstacles();
+    publish_elevation_cloud();
     publish_a_star_path();
     publish_local_obstacles();
 }
@@ -694,6 +727,40 @@ void TrajectoryAndObstaclesPublisher::publish_global_path()
     global_path_pub_->publish(visual_path);
 }
 
+void TrajectoryAndObstaclesPublisher::publish_traveled_path()
+{
+    std::vector<PathPoint> traveled_path;
+    {
+        std::lock_guard<std::mutex> lock(data_mutex_);
+        traveled_path = traveled_traj_;
+    }
+
+    nav_msgs::msg::Path visual_path;
+    visual_path.header.stamp = this->now();
+    visual_path.header.frame_id = planning_frame_;
+
+    visual_path.poses.reserve(traveled_path.size());
+    for (const auto& path_point : traveled_path)
+    {
+        geometry_msgs::msg::PoseStamped pose;
+        pose.header = visual_path.header;
+        pose.pose.position.x = path_point.x;
+        pose.pose.position.y = path_point.y;
+        pose.pose.position.z = path_point.z;
+
+        tf2::Quaternion q;
+        q.setRPY(0.0, 0.0, path_point.theta);
+        pose.pose.orientation.x = q.x();
+        pose.pose.orientation.y = q.y();
+        pose.pose.orientation.z = q.z();
+        pose.pose.orientation.w = q.w();
+
+        visual_path.poses.push_back(pose);
+    }
+
+    traveled_path_pub_->publish(visual_path);
+}
+
 void TrajectoryAndObstaclesPublisher::publish_a_star_path()
 {
     // 如果没有路径数据，直接返回
@@ -821,6 +888,55 @@ void TrajectoryAndObstaclesPublisher::publish_obstacles()
     }
 
     obs_pub_->publish(visual_obs);
+}
+
+void TrajectoryAndObstaclesPublisher::publish_elevation_cloud()
+{
+    std::vector<ObstacleInfo> obstacles;
+    {
+        std::lock_guard<std::mutex> lock(data_mutex_);
+        obstacles = obstacles_;
+    }
+
+    std::unordered_map<Grid2DKey, ObstacleInfo, Grid2DKeyHash> highest_cells;
+    highest_cells.reserve(obstacles.size());
+
+    for (const auto& obs : obstacles) {
+        const Grid2DKey key{
+            static_cast<std::int64_t>(std::floor(obs.x / elevation_grid_resolution_)),
+            static_cast<std::int64_t>(std::floor(obs.y / elevation_grid_resolution_))};
+        auto iter = highest_cells.find(key);
+        if (iter == highest_cells.end() || obs.z > iter->second.z) {
+            highest_cells[key] = obs;
+        }
+    }
+
+    sensor_msgs::msg::PointCloud2 elevation_cloud;
+    elevation_cloud.header.stamp = this->now();
+    elevation_cloud.header.frame_id = planning_frame_;
+    elevation_cloud.width = static_cast<std::uint32_t>(highest_cells.size());
+    elevation_cloud.height = 1;
+    elevation_cloud.is_dense = true;
+
+    sensor_msgs::PointCloud2Modifier modifier(elevation_cloud);
+    modifier.setPointCloud2FieldsByString(1, "xyz");
+    modifier.resize(highest_cells.size());
+
+    sensor_msgs::PointCloud2Iterator<float> iter_x(elevation_cloud, "x");
+    sensor_msgs::PointCloud2Iterator<float> iter_y(elevation_cloud, "y");
+    sensor_msgs::PointCloud2Iterator<float> iter_z(elevation_cloud, "z");
+
+    for (const auto& cell : highest_cells)
+    {
+        *iter_x = static_cast<float>((cell.first.x + 0.5) * elevation_grid_resolution_);
+        *iter_y = static_cast<float>((cell.first.y + 0.5) * elevation_grid_resolution_);
+        *iter_z = static_cast<float>(cell.second.z);
+        ++iter_x;
+        ++iter_y;
+        ++iter_z;
+    }
+
+    elevation_cloud_pub_->publish(elevation_cloud);
 }
 
 void TrajectoryAndObstaclesPublisher::publish_local_obstacles()

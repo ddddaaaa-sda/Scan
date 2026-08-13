@@ -53,3 +53,22 @@ ros2 topic info -v /scan_cmd_vel_debug
 cd ~/atom01_deploy
 ./scripts/can.sh
 ./tools/start_robot.sh
+
+cd ~/scan_ws
+bash tools/start_upper_stack.sh
+tail -f /tmp/scan_upper_stack/*.log
+
+bash ~/scan_ws/tools/trigger_scan_plan.sh start
+
+bash ~/scan_ws/tools/trigger_scan_plan.sh stop
+
+
+bash ~/scan_ws/tools/stop_upper_stack.sh
+
+
+cd ~/atom01_deploy
+bash tools/start_lower_stack.sh
+
+tail -f /tmp/atom_lower_stack/*.log
+
+bash ~/atom01_deploy/tools/stop_lower_stack.sh
