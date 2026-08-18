@@ -68,6 +68,10 @@ public:
   {
     input_cloud_topic_ = declare_parameter<std::string>("input_cloud_topic", "/cloud_registered");
     output_cloud_topic_ = declare_parameter<std::string>("output_cloud_topic", "/scan/cloud_registered");
+    input_effected_cloud_topic_ = declare_parameter<std::string>("input_effected_cloud_topic", "/cloud_effected");
+    output_effected_cloud_topic_ = declare_parameter<std::string>("output_effected_cloud_topic", "/scan/cloud_effected");
+    input_map_cloud_topic_ = declare_parameter<std::string>("input_map_cloud_topic", "/Laser_map");
+    output_map_cloud_topic_ = declare_parameter<std::string>("output_map_cloud_topic", "/scan/Laser_map");
     input_odom_topic_ = declare_parameter<std::string>("input_odom_topic", "/Odometry");
     output_odom_topic_ = declare_parameter<std::string>("output_odom_topic", "/scan/Odometry");
     input_path_topic_ = declare_parameter<std::string>("input_path_topic", "/path");
@@ -92,6 +96,10 @@ public:
 
     cloud_pub_ = create_publisher<sensor_msgs::msg::PointCloud2>(
       output_cloud_topic_, rclcpp::SensorDataQoS());
+    effected_cloud_pub_ = create_publisher<sensor_msgs::msg::PointCloud2>(
+      output_effected_cloud_topic_, rclcpp::SensorDataQoS());
+    map_cloud_pub_ = create_publisher<sensor_msgs::msg::PointCloud2>(
+      output_map_cloud_topic_, rclcpp::SensorDataQoS());
     odom_pub_ = create_publisher<nav_msgs::msg::Odometry>(
       output_odom_topic_, rclcpp::SensorDataQoS());
     path_pub_ = create_publisher<nav_msgs::msg::Path>(
@@ -100,7 +108,19 @@ public:
 
     cloud_sub_ = create_subscription<sensor_msgs::msg::PointCloud2>(
       input_cloud_topic_, rclcpp::SensorDataQoS(),
-      std::bind(&FastlioFrameCorrector::cloud_callback, this, std::placeholders::_1));
+      [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
+        corrected_cloud_callback(msg, cloud_pub_, "registered cloud");
+      });
+    effected_cloud_sub_ = create_subscription<sensor_msgs::msg::PointCloud2>(
+      input_effected_cloud_topic_, rclcpp::SensorDataQoS(),
+      [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
+        corrected_cloud_callback(msg, effected_cloud_pub_, "effected cloud");
+      });
+    map_cloud_sub_ = create_subscription<sensor_msgs::msg::PointCloud2>(
+      input_map_cloud_topic_, rclcpp::SensorDataQoS(),
+      [this](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
+        corrected_cloud_callback(msg, map_cloud_pub_, "map cloud");
+      });
     odom_sub_ = create_subscription<nav_msgs::msg::Odometry>(
       input_odom_topic_, rclcpp::SensorDataQoS(),
       std::bind(&FastlioFrameCorrector::odom_callback, this, std::placeholders::_1));
@@ -114,11 +134,19 @@ public:
       input_cloud_topic_.c_str(), output_cloud_topic_.c_str(),
       input_odom_topic_.c_str(), output_odom_topic_.c_str(),
       output_frame_.c_str(), output_child_frame_.c_str());
+    RCLCPP_INFO(
+      get_logger(),
+      "FAST-LIO frame corrector: effected %s -> %s, map %s -> %s",
+      input_effected_cloud_topic_.c_str(), output_effected_cloud_topic_.c_str(),
+      input_map_cloud_topic_.c_str(), output_map_cloud_topic_.c_str());
     RCLCPP_INFO(get_logger(), "Correction: x'=y, y'=x, z'=-z");
   }
 
 private:
-  void cloud_callback(const sensor_msgs::msg::PointCloud2::SharedPtr msg)
+  void corrected_cloud_callback(
+    const sensor_msgs::msg::PointCloud2::SharedPtr msg,
+    const rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr& publisher,
+    const char* cloud_name)
   {
     auto output = *msg;
     output.header.frame_id = output_frame_;
@@ -138,12 +166,12 @@ private:
     } catch (const std::runtime_error& error) {
       RCLCPP_WARN_THROTTLE(
         get_logger(), *get_clock(), 2000,
-        "Skip cloud correction because PointCloud2 xyz fields are unavailable: %s",
-        error.what());
+        "Skip %s correction because PointCloud2 xyz fields are unavailable: %s",
+        cloud_name, error.what());
       return;
     }
 
-    cloud_pub_->publish(output);
+    publisher->publish(output);
   }
 
   void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
@@ -210,6 +238,10 @@ private:
 
   std::string input_cloud_topic_;
   std::string output_cloud_topic_;
+  std::string input_effected_cloud_topic_;
+  std::string output_effected_cloud_topic_;
+  std::string input_map_cloud_topic_;
+  std::string output_map_cloud_topic_;
   std::string input_odom_topic_;
   std::string output_odom_topic_;
   std::string input_path_topic_;
@@ -221,10 +253,14 @@ private:
   tf2::Matrix3x3 correction_inverse_;
 
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr cloud_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr effected_cloud_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr map_cloud_pub_;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
   rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr path_pub_;
   std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
   rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr cloud_sub_;
+  rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr effected_cloud_sub_;
+  rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr map_cloud_sub_;
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
   rclcpp::Subscription<nav_msgs::msg::Path>::SharedPtr path_sub_;
 };
