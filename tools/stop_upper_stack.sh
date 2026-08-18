@@ -13,7 +13,7 @@ if command -v ros2 >/dev/null 2>&1; then
     >/dev/null 2>&1 || true
 fi
 
-for name in follower scan_planner fast_lio livox; do
+for name in follower scan_planner frame_corrector fast_lio livox; do
   pid_file="$RUN_DIR/$name.pid"
   if [[ -f "$pid_file" ]] && kill -0 "$(cat "$pid_file")" 2>/dev/null; then
     echo "Stopping $name, pid=$(cat "$pid_file")"
@@ -28,7 +28,7 @@ fi
 
 sleep 2
 
-for name in follower scan_planner fast_lio livox; do
+for name in follower scan_planner frame_corrector fast_lio livox; do
   pid_file="$RUN_DIR/$name.pid"
   if [[ -f "$pid_file" ]] && kill -0 "$(cat "$pid_file")" 2>/dev/null; then
     echo "Force stopping $name, pid=$(cat "$pid_file")"

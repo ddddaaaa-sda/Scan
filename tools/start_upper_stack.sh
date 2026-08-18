@@ -72,10 +72,14 @@ start_bg fast_lio "$COMMON_ENV; cd '$LIO_WS'; set +u; source '$LIVOX_WS/install/
 wait_for_topic "/Odometry" 45 || true
 wait_for_topic "/cloud_registered" 45 || true
 
-start_bg scan_planner "$COMMON_ENV; cd '$SCAN_WS'; set +u; source install/setup.bash; set -u; exec ros2 launch scan_planner scan_planner.launch.py use_rviz:=false cloud_topic:=/cloud_registered odom_topic:=/Odometry global_path_topic:=/scan_global_path planning_frame:=camera_init"
+start_bg frame_corrector "$COMMON_ENV; cd '$SCAN_WS'; set +u; source install/setup.bash; set -u; exec ros2 run scan_planner fastlio_frame_corrector --ros-args -p input_cloud_topic:=/cloud_registered -p output_cloud_topic:=/scan/cloud_registered -p input_odom_topic:=/Odometry -p output_odom_topic:=/scan/Odometry -p input_path_topic:=/path -p output_path_topic:=/scan/path -p output_frame:=scan_map -p output_child_frame:=base_link"
+wait_for_topic "/scan/Odometry" 20 || true
+wait_for_topic "/scan/cloud_registered" 20 || true
+
+start_bg scan_planner "$COMMON_ENV; cd '$SCAN_WS'; set +u; source install/setup.bash; set -u; exec ros2 launch scan_planner scan_planner.launch.py use_rviz:=false cloud_topic:=/scan/cloud_registered odom_topic:=/scan/Odometry global_path_topic:=/scan_global_path planning_frame:=scan_map"
 sleep 3
 
-start_bg follower "$COMMON_ENV; cd '$SCAN_WS'; set +u; source install/setup.bash; set -u; exec ros2 launch scan_cmd_vel_follower scan_cmd_vel_follower.launch.py path_topic:=/visual_local_trajectory odom_topic:=/Odometry cmd_topic:=/cmd_vel planning_frame:=camera_init max_linear_x:=0.3 max_angular_z:=0.2 odom_timeout:=2.0 path_timeout:=2.0"
+start_bg follower "$COMMON_ENV; cd '$SCAN_WS'; set +u; source install/setup.bash; set -u; exec ros2 launch scan_cmd_vel_follower scan_cmd_vel_follower.launch.py path_topic:=/visual_local_trajectory odom_topic:=/scan/Odometry cmd_topic:=/cmd_vel planning_frame:=scan_map max_linear_x:=0.3 max_angular_z:=0.2 odom_timeout:=2.0 path_timeout:=2.0"
 
 echo
 echo "Upper stack started."

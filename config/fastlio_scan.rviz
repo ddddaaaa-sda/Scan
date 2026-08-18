@@ -85,8 +85,8 @@ Visualization Manager:
         Durability Policy: Volatile
         Filter size: 10
         History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /Odometry
+        Reliability Policy: Best Effort
+        Value: /scan/Odometry
       Value: true
     - Alpha: 1
       Buffer Length: 1
@@ -113,8 +113,8 @@ Visualization Manager:
         Durability Policy: Volatile
         Filter size: 10
         History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /path
+        Reliability Policy: Best Effort
+        Value: /scan/path
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -145,8 +145,8 @@ Visualization Manager:
         Durability Policy: Volatile
         Filter size: 10
         History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /cloud_registered
+        Reliability Policy: Best Effort
+        Value: /scan/cloud_registered
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -377,7 +377,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 0; 0; 0
-    Fixed Frame: camera_init
+    Fixed Frame: scan_map
     Frame Rate: 30
   Name: root
   Tools:

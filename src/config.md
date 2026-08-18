@@ -55,7 +55,7 @@ cd ~/atom01_deploy
 ./tools/start_robot.sh
 
 cd ~/scan_ws
-bash tools/start_upper_stack.sh
+bash tools/start_upper_stack.sh --configure-link
 tail -f /tmp/scan_upper_stack/*.log
 
 bash ~/scan_ws/tools/trigger_scan_plan.sh start
@@ -72,3 +72,34 @@ bash tools/start_lower_stack.sh
 tail -f /tmp/atom_lower_stack/*.log
 
 bash ~/atom01_deploy/tools/stop_lower_stack.sh
+
+
+pkill -f scan_cmd_vel_follower
+pkill -f scan_planner
+pkill -f fast_lio
+pkill -f livox_ros_driver2
+
+ros2 daemon stop
+
+
+ros2 topic echo /visual_local_trajectory --once
+ros2 topic echo /cmd_vel --once --qos-reliability best_effort
+
+
+screen -S inference_session -X quit
+screen -S joy_session -X quit
+pkill -f inference
+pkill -f joy_node
+ros2 daemon stop
+
+
+
+ros2 topic echo /action --once --qos-reliability best_effort
+ros2 topic echo /joint_states --once --qos-reliability best_effort
+
+ros2 topic info -v /cmd_vel --no-daemon
+
+
+screen -r inference_session
+
+ros2 topic echo /Odometry --once --qos-reliability best_effort

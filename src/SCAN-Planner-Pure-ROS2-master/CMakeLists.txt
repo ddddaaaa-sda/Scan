@@ -47,6 +47,17 @@ ament_target_dependencies(
   visualization_msgs
 )
 
+add_executable(fastlio_frame_corrector src/fastlio_frame_corrector.cpp)
+ament_target_dependencies(
+  fastlio_frame_corrector
+  rclcpp
+  nav_msgs
+  geometry_msgs
+  tf2
+  tf2_ros
+  sensor_msgs
+)
+
 target_link_libraries(
   motion_plan
   bspline_opt  
@@ -59,6 +70,7 @@ target_link_libraries(
 # 安装节点
 install(TARGETS
   motion_plan
+  fastlio_frame_corrector
   DESTINATION lib/${PROJECT_NAME})
 
 install(PROGRAMS
